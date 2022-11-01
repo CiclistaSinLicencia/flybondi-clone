@@ -98,6 +98,9 @@ padding-bottom: 20vh;
   margin-inline: 5%;
   
 }
+
+
+
 #banner-ctn {
   object-fit: cover;
   object-position: center;
@@ -134,7 +137,7 @@ cursor: pointer;
   border-top-left-radius: 20px;
   border-bottom: 0px;
   border-top: 0px;
-  border: 12px solid var(--orange-flybondi);
+  border-left: 12px solid var(--orange-flybondi);
   background-color: 
   #f7f7f7;
   color: var(--orange-flybondi);
@@ -175,8 +178,7 @@ background-color: #f7f7f7;
 #searchBar label{
   text-transform: uppercase;
   font-weight: 600;
-  color: 
-  #6d6e8a;
+  color: #6d6e8a;
   font-size: 14px;
 width: 100%;
 }
@@ -194,45 +196,7 @@ padding: 0px 20px;
 }
 
 /* -------------------MEDIA-------------------  */
-@media (max-width: 891px){
-  #banner-ctn img{
-    width: 100%;
-    height: 300px;
-    }
 
-  #seachBar-top-ctn{
-    position: absolute;
-    top: -38px;
-    z-index: 99;
-    background-color: #4f2d074f;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    width: 100%;
-
-  }
-
-  .searchBar-select-main-ctn{
-    flex-direction: column;
-  }
-
-#searchBar{
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-height: 100%;
-position: relative;
-padding-inline: 20px;
-
-  }
-
-  .searchBar-select-ctn{
-    flex-direction: column;
-
-  }
-  
-
-}
 
 .searchBar-select-ctn{
   gap: 20px;
@@ -278,6 +242,12 @@ color: #444;
   max-width: 280px;
   padding-right: 20px;
 }
+#seachBar-top-ctn{
+  position: absolute;
+  top: -98px;
+  z-index: 99;
+  background-color: #4f2d074f;
+}
 
 .searchBar-btn{
 background-color: var(--orange-flybondi);
@@ -285,6 +255,7 @@ border: 0;
 bottom: 0px;
 border-radius: 50px;
 padding: 10px 0px;
+
 font-size: 17px;
 font-weight: 600;
 width: 100%;
@@ -562,10 +533,11 @@ justify-content: end;
     }
   
     .dropdown-menu {
+      
       position: absolute;
       background-color: gray;
       height: 100%;
-      width:100%;
+      width:100vw;
       transform: translateX(120%);
       transition: 0.5s linear; /* velocidad de apertura Menu */
       top: calc(100% + 0.9em);
@@ -614,7 +586,7 @@ justify-content: end;
     text-align: center;
       width: 100%;
       font-size: 14px;
-      padding:2em 2em;
+      padding:1.5em 2em;
       background-color: white;
       color: var(--orange-flybondi);
       border: none;
@@ -623,7 +595,7 @@ justify-content: end;
       cursor: pointer;
     outline: 0px solid;
       text-decoration: none;
-    
+      text-align: right;
     }
   
     .btn-menu-dropdown:hover{
@@ -739,9 +711,98 @@ justify-content: end;
   
 
 
+
+      
+/* #seachBar-top-ctn{
+  position: absolute;
+  display: flex;
+  top: -99px;
+  z-index: 99;
+  background-color: #4f2d074f;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  width: 100%;
+}
+   */
+
+@media (max-width:450px){
+  #seachBar-top-ctn{
+    display: flex;
+  }
+
+  #searchBar{
+ border:0px
+      }
+
+      #searchBar-ctn{
+        margin-inline: 0;
+      }
+      .searchBar-btn{
+        margin-bottom: 20px;
+      }
+
+         
+      #vuelos{
+        border-radius: 0px;
+        border: 0px;
+        margin: 0;
+        width: 50%;
+        gap: 0;
+      }
+
+      #ultraPases{
+        border-radius: 0px;
+        border: 0px;
+        margin: 0px;
+        width: 50%;
+      }
+}
+
+
+
+
+
+
     @media (max-width: 891px){
 
-     
+
+      #seachBar-top-ctn{
+ 
+        top: -38px;
+
+      }
+
+      #banner-ctn img{
+        width: 100%;
+        height: 300px;
+        }
+
+        
+    /* SearchBar */
+
+      .searchBar-select-main-ctn{
+        flex-direction: column;
+      }
+    
+    #searchBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    
+    position: relative;
+
+    
+      }
+    
+      .searchBar-select-ctn{
+        flex-direction: column;
+    
+      }
+      
+/*  */    
 
         .dropdown{
             display: flex;
