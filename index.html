@@ -54,6 +54,13 @@
                 <a href="#" class="btn-menu-dropdown">Cargas</a>
                 <a href="#" class="btn-menu-dropdown">Blog</a>
                 <a href="#" class="btn-menu-dropdown">¿Preguntas?</a>
+                <div class="selectLenguaje-ctn">
+                <select name="" class="selectLenguaje" >
+                    <option value="argentina">Argentina/$</option>
+                    <option value="brasil">Brasil/R$</option>
+                    <option value="paraguay">Paraguay/U$D</option>
+                </select>
+            </div>
             </div>
         </div>
     </header>
@@ -86,11 +93,21 @@
                 
                 </div>
         <label for="">origen</label>
-<select  name="" id="" class="searchBar-select">    
+
+        <input class="searchBar-select"  type="text" list="brow" placeholder="Origen">
+        <datalist id="brow">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        </datalist>  
+<!-- 
+<input  name="" id="" class="searchBar-select" placeholder="Origen" list="origen">    
+<datalist id="origen">
     <option value="">Buenos Aires</option>
     <option value="">Neuquen</option>
-    <option value="">Bariloche</option>
-</select>
+    <option value="">Bariloche</option> 
+</datalist> -->
 </div>
 
 <div class="searchBar-select-ctn">
@@ -105,11 +122,14 @@
         </div>
 
 <label for="">destino</label>
-<select name="" id="" class="searchBar-select">
+<input type="text" name="" id="" class="searchBar-select" placeholder="Destino" list="destino">
+<datalist id="destino">
     <option value="">Buenos Aires</option>
     <option value="">Neuquen</option>
-    <option value="">Bariloche</option>
-</select>
+    <option value="">Bariloche</option> 
+</datalist>
+
+</input>
 </div>
 
 
@@ -268,6 +288,7 @@
                 Flybondi @ 2022
             </p>
         </div>
+
 
     </footer>
 
