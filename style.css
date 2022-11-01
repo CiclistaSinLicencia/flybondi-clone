@@ -36,7 +36,7 @@ body{
     justify-content: space-between;
     background-color:white;
     box-shadow: 2px 2px 10px 1px  #3333333b;
-    z-index: 99;
+    z-index: 9999;
     width: 100%;
     height: 3.5em;
     top: 0px;
@@ -94,7 +94,7 @@ body{
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-bottom: 300px;
+padding-bottom: 20vh;
   margin-inline: 5%;
 }
 #banner-ctn {
@@ -178,8 +178,8 @@ background-color: #f7f7f7;
   #6d6e8a;
   font-size: 14px;
 width: 100%;
-
 }
+
 
 .searchBar-select-main-ctn{
   display: flex;
@@ -205,13 +205,16 @@ width: 100%;
 
 .searchBar-logo-select{
 position: absolute;
-bottom: 8px;
+bottom: 39px;
 width: 25px;
 left: 10px;
-fill: orange;
+fill: var(--orange-flybondi);
+background-color: green;
+height: 0px;
   }
-  #svg-logo-pasajero{
-top: 4px;
+#svg-logo-pasajero{
+bottom: 36px;
+width: 19px;
   }
 
 .searchBar-select{
@@ -223,11 +226,13 @@ padding: 13px 40px;
 cursor: pointer;
 color: #444;
 }
+.searchBar-select:focus-visible{
+  outline: 20px var(--lightOrange-flybondi);
+}
 
 .searchBar-ctn-btn{
   width: 100%;
   height: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -259,7 +264,89 @@ margin-top: 24px;
 }
 
 
+/* -------------------DESTACADO-------------------  */
 
+.destacados-title-ctn{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+.destacados-title{
+font-weight: 600;
+color: #333;
+height: 10px;
+}
+.destacados-subtitle{
+  color: #666;
+  font-weight: 500;
+}
+.descatacos-card-ctn{
+  width: 100%;
+  display: flex;
+gap: 20px;
+padding-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+
+}
+.descatacos-card{
+  width: 310px;
+  height: 300px;
+
+  object-fit: contain;
+  object-position: center;
+  cursor: pointer;
+
+}
+.descatacos-card:hover  img{
+filter: sepia(0.4);
+}
+.descatacos-card img{
+  transition: 0.5s;
+  border-radius:20px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* -------------------THREECARDS-------------------  */
+.threeCards-ctn{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  gap: 50px;
+
+}
+.threeCards-card{
+  width: 330px;
+color: #333;
+}
+.threeCards-card h2{
+  font-size: 18px;
+  text-align: center;
+  font-weight: 600;
+
+}
+.threeCards-card p{
+color: #666;
+}
+
+.threeCards-anchor{
+  color: rgb(249, 177, 43);
+  text-decoration: none;
+  font-weight: 800;
+}
+.threeCards-anchor:hover{
+  color: rgb(255, 202, 103);
+  text-decoration-line:underline;
+  font-weight: 800;
+}
 
 /* -------------------FOOTER-------------------  */
 
