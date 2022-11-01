@@ -539,12 +539,12 @@ justify-content: end;
       height: 100%;
       width:100vw;
       transform: translateX(120%);
-      transition: 0.5s linear; /* velocidad de apertura Menu */
       top: calc(100% + 0.9em);
       justify-content: right;
       display: flex;
       flex-direction: column;
       z-index: 10;
+      transition: 0.4s ease-in-out; /* velocidad de apertura Menu */
     }
   
     .dropdown-closeBtn{
@@ -586,7 +586,7 @@ justify-content: end;
     text-align: center;
       width: 100%;
       font-size: 14px;
-      padding:1.5em 2em;
+      padding:1em 2em;
       background-color: white;
       color: var(--orange-flybondi);
       border: none;
