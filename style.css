@@ -96,14 +96,17 @@ body{
   position: relative;
 padding-bottom: 20vh;
   margin-inline: 5%;
+  
 }
 #banner-ctn {
-
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
 }
 #banner-ctn img{
 width: 100%;
 padding-top: 50px;
-object-fit: contain;
+object-fit: cover;
 object-position: center;
 }
 
@@ -131,7 +134,6 @@ cursor: pointer;
   border-top-left-radius: 20px;
   border-bottom: 0px;
   border-top: 0px;
-
   border: 12px solid var(--orange-flybondi);
   background-color: 
   #f7f7f7;
@@ -146,15 +148,14 @@ cursor: pointer;
   border-left: 0px;
   margin: -5px;
   color: #777;
-
+transition: 0.2s;
 }
 
-#vuelos:hover{
-background-color: #f1f1f1;
-}
+
 
 #ultraPases:hover{
-  background-color: #f1f1f1;
+  background-color: ;
+  color: #333;
 }
 
 #searchBar{
@@ -185,22 +186,60 @@ width: 100%;
   display: flex;
   flex-direction: row;
   width: 100%;
-  flex-direction: row;
-
   display: flex;
   align-items: center;
   justify-content: left;
   gap: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
+padding: 0px 20px;
 }
 
+/* -------------------MEDIA-------------------  */
+@media (max-width: 891px){
+  #banner-ctn img{
+    width: 100%;
+    height: 300px;
+    }
+
+  #seachBar-top-ctn{
+    position: absolute;
+    top: -38px;
+    z-index: 99;
+    background-color: #4f2d074f;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 100%;
+
+  }
+
+  .searchBar-select-main-ctn{
+    flex-direction: column;
+  }
+
+#searchBar{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+height: 100%;
+position: relative;
+padding-inline: 20px;
+
+  }
+
+  .searchBar-select-ctn{
+    flex-direction: column;
+
+  }
+  
+
+}
 
 .searchBar-select-ctn{
   gap: 20px;
   min-width: 180px;
   width: 100%;
   position: relative;
+
   }
 
 .searchBar-logo-select{
@@ -257,7 +296,9 @@ box-shadow: 5px 7px 10px 0.5px  rgb(196, 196, 196);
 margin-top: 24px;
 }
 
-
+.searchBar-btn:hover{
+  background-color: var(--lightOrange-flybondi);
+}
 
 .btn-flybondi:hover{
   background-color: var(--lightOrange-flybondi);
@@ -268,16 +309,17 @@ margin-top: 24px;
 
 .destacados-title-ctn{
   width: 100%;
+height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-bottom: 20px;
+  
 }
 .destacados-title{
 font-weight: 600;
 color: #333;
-height: 10px;
+margin: 0;
 }
 .destacados-subtitle{
   color: #666;
@@ -290,6 +332,7 @@ gap: 20px;
 padding-bottom: 50px;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 
 }
 .descatacos-card{
@@ -316,12 +359,14 @@ filter: sepia(0.4);
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 350px;
+  height: 100%;
   display: flex;
   align-items: top;
   justify-content: center;
   gap: 50px;
-
+  flex-wrap: wrap;
+  padding-bottom: 80px;
+  padding-top: 80px;
 }
 .threeCards-card{
   width: 330px;
@@ -522,8 +567,8 @@ justify-content: end;
       height: 100%;
       width:100%;
       transform: translateX(120%);
-      transition: 1s ease-out; /* velocidad de apertura Menu */
-      top: calc(100% + 1em);
+      transition: 0.5s linear; /* velocidad de apertura Menu */
+      top: calc(100% + 0.9em);
       justify-content: right;
       display: flex;
       flex-direction: column;
@@ -543,7 +588,7 @@ justify-content: end;
     }
   
     #dropdown-mobile:checked~.dropdown-menu {
-        transform: translate( 20px);
+        transform: translate(32px);
       }
 
     .dropdown-closeBtn-backG {
@@ -570,26 +615,27 @@ justify-content: end;
       width: 100%;
       font-size: 14px;
       padding:2em 2em;
-      background-color: orange;
-      color: white;
+      background-color: white;
+      color: var(--orange-flybondi);
       border: none;
       font-weight: bold;
-      transition: 0.5s linear;
+      transition: 0.1s linear;
       cursor: pointer;
-    outline: 1px solid;
+    outline: 0px solid;
       text-decoration: none;
+    
     }
   
     .btn-menu-dropdown:hover{
       color: white;
-      background-color: rgb(255, 140, 0);
+      background-color: var(--orange-flybondi);
     }
   
     .burgerIcon .bar {
       display: inline-block;
       width: 100%;
       height: 3px;
-      background-color: #84c948;
+      background-color: var(--orange-flybondi);
       border-radius: 8px;
       position: absolute;
       top: calc(70% - 6px);
@@ -695,6 +741,8 @@ justify-content: end;
 
     @media (max-width: 891px){
 
+     
+
         .dropdown{
             display: flex;
         }
@@ -702,6 +750,10 @@ justify-content: end;
             display: none;
         }
 
+
+        .destacados-title-ctn{
+          text-align: center;
+        }
 
         /* -------------------Footer-------------------  */
 
