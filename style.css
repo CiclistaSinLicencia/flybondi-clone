@@ -527,7 +527,7 @@ justify-content: end;
       cursor: pointer;
       background-color: #00000000;
       border: none;
-      margin-right: 20px;
+    
       z-index: 10;
       pointer-events: none;
     }
@@ -766,6 +766,9 @@ justify-content: end;
     @media (max-width: 891px){
 
 
+      .header{
+        padding-inline:1em;
+      }
       #seachBar-top-ctn{
  
         top: -38px;
