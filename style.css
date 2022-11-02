@@ -139,19 +139,16 @@ transform: translateX(-40px);
   position: relative;
   padding-bottom: 20vh;
   margin-inline: 5%;
-
 }
 
-
-
 #banner-ctn {
-  object-fit: cover;
-  object-position: center;
   width: 100%;
+  height: 100%;
 }
 
 #banner-ctn img {
   width: 100%;
+  height: 550px;
   padding-top: 50px;
   object-fit: cover;
   object-position: center;
@@ -820,6 +817,80 @@ color: #333;
     outline: 0px;
    }
 
+
+
+
+
+@media (max-width: 891px) {
+
+  .searchBar-btn {
+    margin-bottom: 20px;
+  }
+
+  .header {
+    padding-inline: 1em;
+  }
+
+  #seachBar-top-ctn {
+
+    top: -38px;
+
+  }
+
+  #banner-ctn img {
+    width: 100%;
+
+    height: 500px;
+flex-shrink: 1;
+
+  }
+
+
+  /* SearchBar */
+
+  .searchBar-select-main-ctn {
+    flex-direction: column;
+  }
+
+  #searchBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+  }
+
+  .searchBar-select-ctn {
+    flex-direction: column;
+
+  }
+
+  /*  */
+
+  .dropdown {
+    display: flex;
+  }
+
+  #nav-ctn {
+    display: none;
+  }
+
+
+  .destacados-title-ctn {
+    text-align: center;
+  }
+
+  /* -------------------Footer-------------------  */
+
+  #footer-ctn-redes {
+    justify-content: center;
+  }
+}
+
+
 @media (max-width:450px) {
 
   #seachBar-top-ctn {
@@ -828,7 +899,7 @@ color: #333;
 
   #banner-ctn img {
     width: 100%;
-    height: 400px;
+    height: 300px;
 
   }
 
@@ -870,70 +941,17 @@ color: #333;
   }
 }
 
-@media (max-width: 891px) {
 
-  .searchBar-btn {
-    margin-bottom: 20px;
-  }
 
-  .header {
-    padding-inline: 1em;
-  }
+@media(max-width: 360px){
 
-  #seachBar-top-ctn {
-
-    top: -38px;
+  #banner-ctn{
+height: 100%;
 
   }
-
   #banner-ctn img {
     width: 100%;
-    height: 300px;
-  }
-
-
-  /* SearchBar */
-
-  .searchBar-select-main-ctn {
-    flex-direction: column;
-  }
-
-  #searchBar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-
-    position: relative;
-
-
-  }
-
-  .searchBar-select-ctn {
-    flex-direction: column;
-
-  }
-
-  /*  */
-
-  .dropdown {
-    display: flex;
-  }
-
-  #nav-ctn {
-    display: none;
-  }
-
-
-  .destacados-title-ctn {
-    text-align: center;
-  }
-
-  /* -------------------Footer-------------------  */
-
-  #footer-ctn-redes {
-    justify-content: center;
+    height: 250px;
+ object-position: center;
   }
 }
