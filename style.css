@@ -32,12 +32,6 @@ body {
 }
 
 
-option {
-background-color: #333;
-width: 100%;
-padding: 300px;
-}
-
 .header {
   position: fixed;
   display: flex;
@@ -86,6 +80,43 @@ padding: 300px;
 
 #nav-select:focus-visible {
   border: 1px solid var(--orange-flybondi);
+}
+#dropdown-mireserva{
+  position: relative;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  font-size: 16px;
+}
+#dropdown-mireserva:focus ~ .dropdown-reserva {
+visibility: visible;
+}
+
+.dropdown-reserva{
+  visibility: hidden;
+  position: absolute;
+gap: 15px;
+display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px 30px;
+  border-radius: 10px;
+margin-inline: auto;
+text-align: left;
+top: 60px;
+height: 150px;
+padding-top: 20px;
+transform: translateX(-40px);
+
+}
+.dropdown-reserva a{
+  color: #777;
+  text-decoration: none;
+  font-weight: 500;
+
+}
+.dropdown-reserva a:hover{
+  color: #333;
 }
 
 /* -------------------Banner-------------------  */
