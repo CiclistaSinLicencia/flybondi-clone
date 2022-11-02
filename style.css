@@ -96,6 +96,14 @@ body {
 #dropdown-mireserva:focus ~ .dropdown-reserva {
 visibility: visible;
 }
+#dropdown-mireserva > span{
+  font-size: 13px;
+}
+
+#dropdown-mireserva:focus > span{
+  transform: rotate(90deg);
+  color: var(--lightOrange-flybondi);
+}
 
 .dropdown-reserva{
   visibility: hidden;
@@ -175,32 +183,32 @@ height: 100%;
 }
 
 .carousel .next {
-  right: 0px;
+  right: 30px;
   width: 60px;
 }
-
-
 .prev {
-  left: 0px;
+  left: 30px;
   width: 60px;
 }
-
-
 
 .slide {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: 0.5s opacity ease-in-out;
+  
+  transition: 0.5s  ease-in-out;
+
 }
 
 .slide[data-active] {
   opacity: 1;
+
 }
 
 .slide>img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
   object-position: center;
 }
@@ -416,6 +424,8 @@ height: 100%;
 .destacados-subtitle {
   color: #666;
   font-weight: 500;
+  text-align: center;
+  padding-inline: 20px;
 }
 
 .descatacos-card-ctn {
@@ -483,15 +493,111 @@ height: 100%;
 }
 
 .threeCards-anchor {
-  color: rgb(249, 177, 43);
+  color: #eaa018;
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .threeCards-anchor:hover {
   color: rgb(255, 202, 103);
   text-decoration-line: underline;
-  font-weight: 800;
+  font-weight: 600;
+}
+/* -------------------Libertad de Volar-------------------  */
+
+.libertadVolar-ctn{
+cursor:auto;
+padding-inline: 1em;
+padding: 1em 0px 5em 0px;
+}
+
+.libertadVolar-card{
+background-color: #f4f3f3;
+height: 100%;
+min-height: 210px;
+width: 420px;
+border-radius: 20px;
+display: flex;
+flex-wrap: wrap;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+gap: 0px;
+}
+
+.libertadVolar-card h2{
+font-weight: 500;
+font-size: 20px;
+text-align: center;
+margin: 0;
+padding-top: 10px;
+color: #444;
+}
+.libertadVolar-card div{
+  display: flex;
+  flex-direction: row;
+  padding-inline:20px;
+}
+.libertadVolar-card img{
+width: 80px;
+height: 80px;
+border-radius: 0;
+}
+.libertadVolar-card p{
+  font-size: 14px;
+  width: 100%;
+  padding-left: 20px;
+  color: #444;
+}
+/* -------------------NewsLetter-------------------  */
+.newsLetter-ctn{
+  width: 100%;
+  display: flex;
+  align-items: center;
+justify-content: center;
+  flex-direction: column;
+  background-color: rgb(235, 235, 235);
+  height: 200px;
+}
+
+.form-newsletter{
+  width: 80%;
+  max-width: 40rem;
+
+}
+.destacados-input
+{
+padding: 10px 20px;
+font-weight: 500;
+font-size: 16px;
+border: 0px solid gray;
+color: #333;
+
+}
+
+.destacados-input:focus{
+  border: 0px;
+  outline: 1px solid var(--lightOrange-flybondi);
+}
+
+.destacados-input::placeholder{
+  color: #999;
+}
+.destacados-mail{
+  border-radius: 10px 0px 0px 10px;
+  width: 70%;
+}
+.destacados-btn{
+  border-radius: 0px 10px 10px 0px;
+  background-color: var(--lightOrange-flybondi);
+  margin: -10px;
+  width: 30%;
+  cursor: pointer;
+  transition: 0.2s;
+  color: #333;
+}
+.destacados-btn:hover{
+  background-color: var(--orange-flybondi);
 }
 
 /* -------------------FOOTER-------------------  */
@@ -885,6 +991,7 @@ color: #333;
     font-weight: 600;
     color: #444;
     border: 2px solid gray;
+
    }
    .selectLenguaje:focus-visible{
     border: 2px solid orange;
