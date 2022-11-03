@@ -17,6 +17,7 @@ body {
   --lightOrange-flybondi: #fed156;
   --nav-btn-hover:
     #999;
+    --clr-valid:#c2ff67ba;
 }
 
 
@@ -587,10 +588,24 @@ color: #333;
   border-radius: 10px 0px 0px 10px;
   width: 70%;
 }
+.destacados-mail:valid{
+
+outline: 2px solid var(--clr-valid);
+}
+
+.destacados-mail:valid + .destacados-btn{
+background-color: var(--clr-valid);
+outline: 2px solid var(--clr-valid);
+  }
+  .destacados-mail:valid + .destacados-btn:hover{
+    background-color: #aff35b;
+    outline: 2px solid #aff35b;
+      }
+
 .destacados-btn{
   border-radius: 0px 10px 10px 0px;
   background-color: var(--lightOrange-flybondi);
-  margin: -10px;
+  margin: -3px;
   width: 30%;
   cursor: pointer;
   transition: 0.2s;

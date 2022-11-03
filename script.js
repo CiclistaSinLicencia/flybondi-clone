@@ -19,3 +19,15 @@ buttons.forEach((button) => {
     delete activeSlide.dataset.active;
   });
 });
+
+
+caramelos = 2 (1)
+chocolate = 1 (2)
+
+
+4$
+
+caramelos = 3 (1)
+chocolate = 2 (2)
+
+7$
