@@ -1,6 +1,4 @@
 console.warn("Java Working")
-
-
 /* IMAGENES Carousel */
 const buttons = document.querySelectorAll("[data-carousel-button]");
 buttons.forEach((button) => {
