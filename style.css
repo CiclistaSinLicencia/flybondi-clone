@@ -750,7 +750,15 @@ color: #333;
 #rightsFlybondi {
 
   text-align: center;
-  height: 0px;
+  height: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding-top: 30px;
+}
+
+#rightsFlybondi img{
+height: 30px;
 
 }
 
