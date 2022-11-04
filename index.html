@@ -18,20 +18,21 @@
 
         <nav id="nav-ctn">
 
-                <button class="nav-btn dropdown-mireserva-btn"> Mi reserva <span>▼</span>
+            <!-- ----------------------BTN MIRESERVA---------------------- -->
+                <button class="nav-btn dropdown-mireserva-btn"><span class="dropdown-nav-btn">Mi Reserva</span> <span class="dropdown-arrow">▼</span>
                 <div class="dropdown-reserva">
-                    <a href="#">Cambio de asiento/equipaje</a>
-                    <a href="https://booking2.flybondi.com/es/manage/manage-booking?_gl=1*1k4953s*_ga*MTgwNzY2OTMwMC4xNjYzMzc5Mjk1*_ga_1HGSJR4WPQ*MTY2NzU2NTI5OS41Mi4xLjE2Njc1NjYzNDEuNTQuMC4w">Estado de mi reserva</a>
-                    <a href="https://flybondi.com/flights/">Estado de vuelo</a>
+                    <a class="dropdown-mireserva-anchor" href="#">Cambio de asiento/equipaje</a>
+                    <a class="dropdown-mireserva-anchor" href="https://booking2.flybondi.com/es/manage/manage-booking?_gl=1*1k4953s*_ga*MTgwNzY2OTMwMC4xNjYzMzc5Mjk1*_ga_1HGSJR4WPQ*MTY2NzU2NTI5OS41Mi4xLjE2Njc1NjYzNDEuNTQuMC4w">Estado de mi reserva</a>
+                    <a class="dropdown-mireserva-anchor" href="https://flybondi.com/flights/">Estado de vuelo</a>
 
                     <div>
-                    <a href="https://booking2.flybondi.com/es/manage/manage-booking?_gl=1*kfwyo5*_ga*MTgwNzY2OTMwMC4xNjYzMzc5Mjk1*_ga_1HGSJR4WPQ*MTY2NzU2NTI5OS41Mi4xLjE2Njc1NjYzNDEuNTQuMC4w">Check in</a>
+                    <a class="dropdown-mireserva-anchor" href="https://booking2.flybondi.com/es/manage/manage-booking?_gl=1*kfwyo5*_ga*MTgwNzY2OTMwMC4xNjYzMzc5Mjk1*_ga_1HGSJR4WPQ*MTY2NzU2NTI5OS41Mi4xLjE2Njc1NjYzNDEuNTQuMC4w">Check in</a>
                 </div>
                 </div>
             </button>
 
 
-            <a href="https://flybondi.com/club" class="nav-btn">Club</a>
+            <a  href="https://flybondi.com/club" class="nav-btn">Club</a>
             
             <a href="https://flybondi.com/flybondicargas" class="nav-btn">Cargas</a>
 
@@ -40,17 +41,22 @@
             <a href="https://ayuda.flybondi.com/?_gl=1*cndkkf*_ga*MTgwNzY2OTMwMC4xNjYzMzc5Mjk1*_ga_1HGSJR4WPQ*MTY2NzU2NTI5OS41Mi4xLjE2Njc1NjYzNDEuNTQuMC4w" class="nav-btn">¿Preguntas?</a>
 
           
-                <button class="nav-btn dropdown-mireserva-btn" id="country-dropdown">Arg/$<span>▼</span>
-                    <img id="logo-arg" src="/img/country/arg.png" alt="logo argentina" > 
+            <!-- ----------------------BtnPais---------------------- -->
+                <button class="nav-btn dropdown-mireserva-btn" id="country-dropdown-nav-btn">
+                    <img id="logo-arg" src="/img/country/arg.png" alt="logo argentina"> 
+                    <span class="dropdown-nav-btn"> Arg/$</span>
+                    <span class="dropdown-arrow">▼</span>
+                    
                 <div class="dropdown-reserva" id="dropdown-country">
              
-             
-                    <a href="" class="country-dropdown-btn">Brasil/$R</a>
-                    <img class="country-logo" id="logo-br" src="/img/country/br.png" alt="logo argentina" > 
-
-                    <a href="" class="country-dropdown-btn" >Paraguay/U$D</a>
-                    <img class="country-logo" id="logo-par" src="/img/country/par.png" alt="logo argentina" > 
-
+                    <a  href="" class="country-dropdown-anchor">
+                        <img class="country-logo" id="logo-br" src="/img/country/br.png" alt="logo argentina" > 
+                        Br/$R
+                    </a>
+                   
+                    <a href="" class="country-dropdown-anchor">
+                        <img class="country-logo" id="logo-par" src="/img/country/par.png" alt="logo argentina" >  Par/U$D
+                    </a>
                 </div>
             </button>
 
@@ -79,11 +85,23 @@
   
                 <div class="selectLenguaje-ctn">
        
-                    <select name="" class="selectLenguaje">
-                        <option value="argentina">Argentina/$</option>
-                        <option value="brasil">Brasil/R$</option>
-                        <option value="paraguay">Paraguay/U$D</option>
-                    </select>
+                    <button class="nav-btn dropdown-mireserva-btn" id="country-dropdown-nav-btn">
+                        <img id="logo-arg" src="/img/country/arg.png" alt="logo argentina"> 
+                        <span class="dropdown-nav-btn"> Arg/$</span>
+                        <span class="dropdown-arrow">▼</span>
+                        
+                    <div class="dropdown-reserva" id="dropdown-country">
+                 
+                        <a  href="" class="country-dropdown-anchor">
+                            <img class="country-logo" id="logo-br" src="/img/country/br.png" alt="logo argentina" > 
+                            Br/$R
+                        </a>
+                       
+                        <a href="" class="country-dropdown-anchor">
+                            <img class="country-logo" id="logo-par" src="/img/country/par.png" alt="logo argentina" >  Par/U$D
+                        </a>
+                    </div>
+                </button>
                 </div>
             </div>
         </div>
@@ -140,16 +158,17 @@
                         </svg>
 
                     </div>
-                    <label for="">origen</label>
 
-                 
-       
-<input  name="" id="" class="searchBar-select" placeholder="Origen" list="origen">    
-<datalist id="origen">
-    <option value="">Buenos Aires</option>
-    <option value="">Neuquen</option>
-    <option value="">Bariloche</option> 
-</datalist> 
+                    <label for="">Origen</label>
+                    <select name="" id="" class="searchBar-select">
+                        <option value="">Buenos Aires</option>
+                        <option value="">Neuquen</option>
+                        <option value="">Usuahia</option>
+                        <option value="">Tucuman</option>
+                        <option value="">Bariloche</option>
+                        <option value="">Cordoba</option>
+                        <option value="">Salta</option>
+                    </select>
                 </div>
 
                 <div class="searchBar-select-ctn">
@@ -164,13 +183,16 @@
                         </svg>
                     </div>
 
-                    <label for="">destino</label>
-                    <input type="text" name="" id="" class="searchBar-select" placeholder="Destino" list="destino">
-                    <datalist id="destino">
+              <label for="">Destino</label>
+                    <select name="" id="" class="searchBar-select">
                         <option value="">Buenos Aires</option>
                         <option value="">Neuquen</option>
+                        <option value="">Usuahia</option>
+                        <option value="">Tucuman</option>
                         <option value="">Bariloche</option>
-                    </datalist>
+                        <option value="">Cordoba</option>
+                        <option value="">Salta</option>
+                    </select>
 
                     </input>
                 </div>
@@ -211,7 +233,7 @@
     </div>
 
     <!-- --------------------DESTACADOS------------------------ -->
-    <div class="element-fourCards-title-ctn">
+    <div class="element-fourCards-title-ctn"> 
         <h2 class="element-fourCards-title">¡Mirá los destacados de hoy! ¡No te pierdas los Precios Rebobinados!</h2>
         <p class="element-fourCards-subtitle">¡No dejes de entrar a todos los destinos nacionales para comprar con
             precio de 2021 pero en 2022!</p>
@@ -370,7 +392,7 @@
     <div class="newsLetter-ctn">
 
         <h2 class="element-fourCards-title">¡No te pierdas de nada!</h2>
-        <p class="element-fourCards-subtitle">Hey! Suscribite a nuestro newsletter para enterarte de todo antes que
+        <p class="element-fourCards-subtitle">Suscribite a nuestro newsletter para enterarte de todo antes que
             nadie. Que no se corte!</p>
 
         <form action="" class="form-newsletter">

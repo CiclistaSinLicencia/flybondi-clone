@@ -74,7 +74,7 @@ body {
   font-weight: 400;
 }
 
-.nav-btn:hover {
+.nav-btn:hover{
   color: var(--nav-btn-hover);
 }
 
@@ -98,51 +98,66 @@ body {
 }
 
 .dropdown-mireserva-btn:focus-within>.dropdown-reserva {
-  display: flex;
+  visibility: visible;
+  scale: 1;
 }
 
-.dropdown-mireserva-btn>span {
+.dropdown-mireserva-btn:focus-within>.dropdown-arrow {
+  color: #f7b914;
+}
+
+.dropdown-mireserva-btn:focus-within>.dropdown-nav-btn {
+  color: #f7b914;
+}
+
+
+.dropdown-arrow {
   font-size: 13px;
 }
 
-.dropdown-mireserva-btn:focus {
+.dropdown-reserva a:hover {
   color: #f7b914;
-  ;
 }
 
 .dropdown-reserva {
-  display: none;
+  cursor: auto;
+  display: flex;
+  visibility: hidden;
   position: absolute;
-  gap: 15px;
+  gap: 20px;
   flex-direction: column;
   background-color: white;
-  padding: 10px 30px;
+  padding: 20px 20px;
   border-radius: 10px;
   text-align: left;
-  height: 235px;
-  padding-top: 20px;
-  transform: translateX(-40px);
-  box-shadow: 3px 3px 20px 1px rgba(31, 31, 31, 0.164);
-  z-index: 90;
-
   top: 45px;
+  transform: translateX(-26%);
+  box-shadow: 3px 3px 20px 1px #1f1f1f2a;
+  scale: 0;
+  transform-origin: 30% 0%;
+  transition: 0.2s scale ease-in-out;
 }
 
-#dropdown-country {
-  height: 120px;
-}
 
 .dropdown-reserva a {
-  color: #777;
-
+  color: #666;
   text-decoration: none;
   font-weight: 500;
   z-index: 99;
-  pointer-events: all;
+  cursor: pointer;
+
 }
 
-.dropdown-reserva a:hover {
-  color: #333;
+.dropdown-mireserva-anchor {
+  width: 250px;
+}
+
+.country-dropdown-anchor img {
+  transition: 0.3s;
+}
+
+.country-dropdown-anchor:hover img {
+  scale: 1.1;
 }
 
 #logo-arg {
@@ -164,17 +179,16 @@ body {
   top: 60px;
 }
 
-#country-dropdown {
+#country-dropdown-nav-btn {
   margin-left: 25px;
-
 }
 
 #dropdown-country {
-  left: -60px;
+  left: -5px;
 }
 
-.country-dropdown-btn {
-  padding-left: 20px;
+.country-dropdown-anchor {
+  padding-left: 32px;
 }
 
 /*-------------------------
@@ -433,7 +447,7 @@ body {
   bottom: 0px;
   border-radius: 50px;
   padding: 10px 0px;
-text-decoration: none;
+  text-decoration: none;
   font-size: 17px;
   font-weight: 600;
   width: 100%;
@@ -764,7 +778,7 @@ text-decoration: none;
   display: flex;
   align-items: flex-end;
   justify-content: end;
-  
+
 }
 
 .footer-ctn-redes-anchor svg {
@@ -831,7 +845,6 @@ text-decoration: none;
 }
 
 .dropdown-menu {
-
   position: absolute;
   background-color: white;
   height: 100vh;
@@ -1013,10 +1026,11 @@ text-decoration: none;
 
 .selectLenguaje-ctn {
   width: 100%;
-  height: 100px;
+  height: 0px;
   display: flex;
-  align-items: center;
+
   justify-content: center;
+padding-top: 50px;
 }
 
 .selectLenguaje {
@@ -1046,36 +1060,44 @@ text-decoration: none;
 --------------------------*/
 
 @media (max-width: 891px) {
-/* Header */
-.header {
-  padding-inline: 1em;
-}
-/* Nav Desktop*/
-#nav-ctn {
-  display: none;
-}
-/* dropdown Mobile*/
-.dropdown {
-  display: flex;
-}
-/* Banner Carousel*/
-#banner-ctn img {
-  width: 100%;
-  height: 500px;
-  flex-shrink: 1;
-}
-.carousel-button {
-  font-size: 2.5em;
-}
-.carousel {
-  height: 250px;
-  width: 100%;
-  position: relative;
-}
+
+  /* Header */
+  .header {
+    padding-inline: 1em;
+  }
+
+  /* Nav Desktop*/
+  #nav-ctn {
+    display: none;
+  }
+
+  /* dropdown Mobile*/
+  .dropdown {
+    display: flex;
+  }
+
+  /* Banner Carousel*/
+  #banner-ctn img {
+    width: 100%;
+    height: 500px;
+    flex-shrink: 1;
+  }
+
+  .carousel-button {
+    font-size: 2.5em;
+  }
+
+  .carousel {
+    height: 250px;
+    width: 100%;
+    position: relative;
+  }
+
   /* SearchBar */
   .searchBar-select-main-ctn {
     flex-direction: column;
   }
+
   #searchBar {
     display: flex;
     align-items: center;
@@ -1085,6 +1107,7 @@ text-decoration: none;
     width: 100%;
     position: relative;
   }
+
   .searchBar-select-ctn {
     flex-direction: column;
   }
@@ -1105,16 +1128,18 @@ text-decoration: none;
     object-fit: cover;
     height: 150px;
   }
+
   .element-fourCards-title-ctn {
     text-align: center;
   }
 
 
-/* threeCards */
+  /* threeCards */
   .threeCards-card {
     text-align: center;
   }
-/* Footer */
+
+  /* Footer */
   #footer-ctn-redes {
     justify-content: center;
   }
@@ -1122,10 +1147,12 @@ text-decoration: none;
 
 
 @media (max-width:450px) {
+
   /* Carousel */
   .carousel {
     height: 220px;
   }
+
   /* SearchBar */
   #vuelos {
     border-radius: 0px;
@@ -1134,29 +1161,36 @@ text-decoration: none;
     width: 50%;
     gap: 0;
   }
+
   #ultraPases {
     border-radius: 0px;
     border: 0px;
     margin: 0px;
     width: 50%;
   }
+
   #seachBar-top-ctn {
     margin-top: 20px;
   }
+
   #seachBar-top-ctn button {
     padding: 0.6em 3em;
   }
+
   #seachBar-top-ctn {
     display: flex;
   }
+
   #searchBar {
     border: 0px;
     padding-top: 40px;
   }
+
   #searchBar-ctn {
     margin-inline: 0;
   }
-/* libertad de volar */
+
+  /* libertad de volar */
   .libertadVolar-card {
     border-radius: 0px;
   }
