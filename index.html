@@ -1,64 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flybondi Clone</title>
     <link rel="stylesheet" href="style.css">
-    <script  defer src="script.js"></script>
+    <script defer src="script.js"></script>
 
-    <link rel="icon" type="image/png" href="img/favicon.png"/>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
 </head>
+
 <body>
     <header class="header">
         <img src="img/logo.svg" id="logoFlybondi"></img>
-        
-<nav id="nav-ctn">
-    
-    <div>
-<button  class="nav-btn" id="dropdown-mireserva"> Mi reserva <span>▼</span></button>
-<div class="dropdown-reserva">
-    <a href="">Cambio de asiento/equipaje</a>
-    <a href="">Estado de mi reserva</a>
-    <a href="">Estado de vuelo</a>
-   
-<a href="">Check in</a>
 
-</div>
-</div>
+        <nav id="nav-ctn">
 
-<a href="#" class="nav-btn">Club</a>
-<a href="#" class="nav-btn">Cargas</a>
-<a href="#" class="nav-btn">Blog</a>
-<a href="#" class="nav-btn">¿Preguntas?</a>
+                <button class="nav-btn dropdown-mireserva-btn"> Mi reserva <span>▼</span>
+                <div class="dropdown-reserva">
+                    <a href="#">Cambio de asiento/equipaje</a>
+                    <a href="#">Estado de mi reserva</a>
+                    <a href="#">Estado de vuelo</a>
 
-<div>
-    <button  class="nav-btn" id="dropdown-mireserva">Argentina/$<span>▼</span></button>
-    <div class="dropdown-reserva">
-        <a href="">Brasil/R</a>
-        <a href="">Paraguay/U$D</a>
-    </div>
-    </div>
+                    <div>
+                    <a href="https://flybondi.com/ar">Check in</a>
+                </div>
+                </div>
+            </button>
 
-<!-- <select name="" id="nav-select">
+
+            <a href="#" class="nav-btn">Club</a>
+            <a href="#" class="nav-btn">Cargas</a>
+            <a href="#" class="nav-btn">Blog</a>
+            <a href="#" class="nav-btn">¿Preguntas?</a>
+
+          
+                <button class="nav-btn dropdown-mireserva-btn" id="country-dropdown">Arg/$<span>▼</span>
+                    <img id="logo-arg" src="/img/country/arg.png" alt="logo argentina" > 
+                <div class="dropdown-reserva" id="dropdown-country">
+             
+             
+                    <a href="" class="country-dropdown-btn">Brasil/$R</a>
+                    <img class="country-logo" id="logo-br" src="/img/country/br.png" alt="logo argentina" > 
+
+                    <a href="" class="country-dropdown-btn" >Paraguay/U$D</a>
+                    <img class="country-logo" id="logo-par" src="/img/country/par.png" alt="logo argentina" > 
+
+                </div>
+            </button>
+
+            <!-- <select name="" id="nav-select">
     <option value="argentina">Argentina/$</option>
     <option value="brasil">Brasil/R$</option>
     <option value="paraguay">Paraguay/U$D</option>
 </select> -->
-</nav>
+        </nav>
 
         <!-- BTN Mobile -->
         <div class="dropdown">
             <input type="checkbox" id="dropdown-mobile">
             <label for="dropdown-mobile" class="dropdown-closeBtn-backG"></label>
             <label for="dropdown-mobile" class="dropdown-closeBtn"></label>
-            <button  class="burgerIcon">
+            <button class="burgerIcon">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
-            
+
             <div class="dropdown-menu">
                 <a href="#" class="btn-menu-dropdown"> Mi reserva </a>
                 <a href="#" class="btn-menu-dropdown">Estado de vuelo </a>
@@ -68,13 +78,15 @@
                 <a href="#" class="btn-menu-dropdown">Cargas</a>
                 <a href="#" class="btn-menu-dropdown">Blog</a>
                 <a href="#" class="btn-menu-dropdown">¿Preguntas?</a>
+  
                 <div class="selectLenguaje-ctn">
-                <select name="" class="selectLenguaje" >
-                    <option value="argentina">Argentina/$</option>
-                    <option value="brasil">Brasil/R$</option>
-                    <option value="paraguay">Paraguay/U$D</option>
-                </select>
-            </div>
+       
+                    <select name="" class="selectLenguaje">
+                        <option value="argentina">Argentina/$</option>
+                        <option value="brasil">Brasil/R$</option>
+                        <option value="paraguay">Paraguay/U$D</option>
+                    </select>
+                </div>
             </div>
         </div>
     </header>
@@ -115,232 +127,279 @@
             <button id="vuelos">Vuelos</button>
             <button id="ultraPases">Ultra Pases</button>
         </div>
-        
-    <div id="searchBar">
-        <div class="searchBar-select-main-ctn">
 
-        <div class="searchBar-select-ctn">
-            <div class="searchBar-logo-select">
-                <svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <g>
-                        <path fill="none" d="M0 0h24v24H0z"/>
-                        <path d="M10.478 11.632L5.968 4.56l1.931-.518 6.951 6.42 5.262-1.41a1.5 1.5 0 0 1 .776 2.898L5.916 15.96l-.776-2.898.241-.065 2.467 2.445-2.626.704a1 1 0 0 1-1.133-.48L1.466 10.94l1.449-.388 2.466 2.445 5.097-1.366zM4 19h16v2H4v-2z"/>
-                    </g>
-                </svg>
-                
-                </div>
-        <label for="">origen</label>
+        <div id="searchBar">
+            <div class="searchBar-select-main-ctn">
 
-        <input class="searchBar-select"  type="text" list="brow" placeholder="Origen">
-        <datalist id="brow">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        </datalist>  
-<!-- 
+                <div class="searchBar-select-ctn">
+                    <div class="searchBar-logo-select">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M10.478 11.632L5.968 4.56l1.931-.518 6.951 6.42 5.262-1.41a1.5 1.5 0 0 1 .776 2.898L5.916 15.96l-.776-2.898.241-.065 2.467 2.445-2.626.704a1 1 0 0 1-1.133-.48L1.466 10.94l1.449-.388 2.466 2.445 5.097-1.366zM4 19h16v2H4v-2z" />
+                            </g>
+                        </svg>
+
+                    </div>
+                    <label for="">origen</label>
+
+                    <input class="searchBar-select" type="text" list="brow" placeholder="Origen">
+                    <datalist id="brow">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </datalist>
+                    <!-- 
 <input  name="" id="" class="searchBar-select" placeholder="Origen" list="origen">    
 <datalist id="origen">
     <option value="">Buenos Aires</option>
     <option value="">Neuquen</option>
     <option value="">Bariloche</option> 
 </datalist> -->
-</div>
+                </div>
 
-<div class="searchBar-select-ctn">
+                <div class="searchBar-select-ctn">
 
-    <div class="searchBar-logo-select">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <g>
-                <path fill="none" d="M0 0h24v24H0z"/>
-                <path d="M10.254 10.47l-.37-8.382 1.933.518 2.81 9.035 5.261 1.41a1.5 1.5 0 1 1-.776 2.898L4.14 11.937l.776-2.898.242.065.914 3.35-2.627-.703a1 1 0 0 1-.74-.983l.09-5.403 1.449.388.914 3.351 5.096 1.366zM4 19h16v2H4v-2z"/>
-            </g>
-        </svg>
+                    <div class="searchBar-logo-select">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M10.254 10.47l-.37-8.382 1.933.518 2.81 9.035 5.261 1.41a1.5 1.5 0 1 1-.776 2.898L4.14 11.937l.776-2.898.242.065.914 3.35-2.627-.703a1 1 0 0 1-.74-.983l.09-5.403 1.449.388.914 3.351 5.096 1.366zM4 19h16v2H4v-2z" />
+                            </g>
+                        </svg>
+                    </div>
+
+                    <label for="">destino</label>
+                    <input type="text" name="" id="" class="searchBar-select" placeholder="Destino" list="destino">
+                    <datalist id="destino">
+                        <option value="">Buenos Aires</option>
+                        <option value="">Neuquen</option>
+                        <option value="">Bariloche</option>
+                    </datalist>
+
+                    </input>
+                </div>
+
+
+
+                <div class="searchBar-select-ctn">
+
+
+
+                    <div class="searchBar-logo-select" id="svg-logo-pasajero">
+                        <svg width="20px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <title>ionicons-v5-j</title>
+                            <path
+                                d="M288,256c52.79,0,99.43-49.71,104-110.82,2.27-30.7-7.36-59.33-27.12-80.6C345.33,43.57,318,32,288,32c-30.24,0-57.59,11.5-77,32.38-19.63,21.11-29.2,49.8-27,80.78C188.49,206.28,235.12,256,288,256Z" />
+                            <path
+                                d="M495.38,439.76c-8.44-46.82-34.79-86.15-76.19-113.75C382.42,301.5,335.83,288,288,288s-94.42,13.5-131.19,38c-41.4,27.6-67.75,66.93-76.19,113.75-1.93,10.73.69,21.34,7.19,29.11A30.94,30.94,0,0,0,112,480H464a30.94,30.94,0,0,0,24.21-11.13C494.69,461.1,497.31,450.49,495.38,439.76Z" />
+                            <path
+                                d="M104,288V248h40a16,16,0,0,0,0-32H104V176a16,16,0,0,0-32,0v40H32a16,16,0,0,0,0,32H72v40a16,16,0,0,0,32,0Z" />
+                        </svg>
+                    </div>
+
+
+                    <label for="">cantidad de pasajeros</label>
+                    <select name="" id="" class="searchBar-select">
+                        <option value="">1 Adulto</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="searchBar-ctn-btn">
+                <button class="searchBar-btn">Buscar vuelos</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- --------------------DESTACADOS------------------------ -->
+    <div class="element-fourCards-title-ctn">
+        <h2 class="element-fourCards-title">¡Mirá los destacados de hoy! ¡No te pierdas los Precios Rebobinados!</h2>
+        <p class="element-fourCards-subtitle">¡No dejes de entrar a todos los destinos nacionales para comprar con
+            precio de 2021 pero en 2022!</p>
+    </div>
+
+    <div class="element-fourCards-card-ctn">
+
+        <div class="element-fourCards-card">
+            <img class="element-fourCards-img" src="img/destacados/bue-tuc.webp" alt="">
         </div>
 
-<label for="">destino</label>
-<input type="text" name="" id="" class="searchBar-select" placeholder="Destino" list="destino">
-<datalist id="destino">
-    <option value="">Buenos Aires</option>
-    <option value="">Neuquen</option>
-    <option value="">Bariloche</option> 
-</datalist>
-
-</input>
-</div>
-
-
-
-<div class="searchBar-select-ctn">
-
-
-
-    <div class="searchBar-logo-select" id="svg-logo-pasajero">
-        <svg  width="20px"  viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><title>ionicons-v5-j</title><path d="M288,256c52.79,0,99.43-49.71,104-110.82,2.27-30.7-7.36-59.33-27.12-80.6C345.33,43.57,318,32,288,32c-30.24,0-57.59,11.5-77,32.38-19.63,21.11-29.2,49.8-27,80.78C188.49,206.28,235.12,256,288,256Z"/><path d="M495.38,439.76c-8.44-46.82-34.79-86.15-76.19-113.75C382.42,301.5,335.83,288,288,288s-94.42,13.5-131.19,38c-41.4,27.6-67.75,66.93-76.19,113.75-1.93,10.73.69,21.34,7.19,29.11A30.94,30.94,0,0,0,112,480H464a30.94,30.94,0,0,0,24.21-11.13C494.69,461.1,497.31,450.49,495.38,439.76Z"/><path d="M104,288V248h40a16,16,0,0,0,0-32H104V176a16,16,0,0,0-32,0v40H32a16,16,0,0,0,0,32H72v40a16,16,0,0,0,32,0Z"/></svg>
+        <div class="element-fourCards-card">
+            <img class="element-fourCards-img" src="img/destacados/bue-rel.webp" alt="">
         </div>
 
-
-<label for="">cantidad de pasajeros</label>
-<select name="" id=""class="searchBar-select">  
-    <option value="">1 Adulto</option>
-    <option value="">2</option>
-    <option value="">3</option>
-</select>
-</div>
-</div>
-
-<div class="searchBar-ctn-btn">
-    <button class="searchBar-btn">Buscar vuelos</button>
-</div>
-
-    </div>
-</div>
-
-<!-- --------------------DESTACADOS------------------------ -->
-<div class="destacados-title-ctn">
-<h2 class="destacados-title">¡Mirá los destacados de hoy! ¡No te pierdas los Precios Rebobinados!</h2>
-<p class="destacados-subtitle">¡No dejes de entrar a todos los destinos nacionales para comprar con precio de 2021 pero en 2022!</p>
-</div>
-
-<div class="descatacos-card-ctn">
-<div class="descatacos-card"><img src="img/destacados/bue-tuc.webp" alt=""></div>
-<div class="descatacos-card"><img src="img/destacados/bue-rel.webp" alt=""></div>
-<div class="descatacos-card"><img src="img/destacados/bue-sde.webp" alt=""></div>
-<div class="descatacos-card"><img src="img/destacados/cor-nqn.webp" alt=""></div>
-</div>
-
-
-
-<div class="threeCards-ctn">
-
-    <div class="threeCards-card"> 
-        <img src="/img/threeCards/equipaje.svg" alt="">
-        <h2>COMPRÁ TUS EXTRAS ONLINE</h2>
-        <p>¿Querés comprar tu valija, elegir tu asiento o viajar con tu mascota? <a href="" class="threeCards-anchor">Click acá.</a></p>
-    </div>
-
-    <div class="threeCards-card">
-        <img src="/img/threeCards/voucher.svg" alt="">
-        <h2>CONSULTÁ TU VOUCHER</h2>
-        <p>Ingresá <a href="" class="threeCards-anchor">acá</a> los datos de tu voucher para conocer el saldo disponible</p>
-    </div>
-
-    <div class="threeCards-card">
-        <img src="/img/threeCards/promociones.svg" alt="">
-        <h2>PROMOCIONES Y FINANCIACIÓN</h2>
-        <p>Hacé <a href="" class="threeCards-anchor">click acá</a> y conocé todas las promociones y opciones de financiación que tenemos para que viajes aun más ultra low cost.
-        </p>
-        
-    </div>
-</div>
-<!-- ----------------------VolaATumedida---------------------- -->
-
-<div class="destacados-title-ctn">
-    <h2 class="destacados-title">Volá a tu medida</h2>
-    <p class="destacados-subtitle">¡Elegí la opción que más te guste y preparate para despegar!</p>
-    </div>
-    
-    <div class="descatacos-card-ctn">
-    <div class="descatacos-card"><img src="img/volaATuMedida/cards-home-ultra-pases-club-grupos-revista-01.webp" alt=""></div>
-    <div class="descatacos-card"><img src="/img/volaATuMedida/cards-home-ultra-pases-club-grupos-revista-02.webp" alt=""></div>
-    <div class="descatacos-card"><img src="/img/volaATuMedida/cards-home-ultra-pases-club-grupos-revista-03.webp" alt=""></div>
-    <div class="descatacos-card"><img src="/img/volaATuMedida/cards-home-ultra-pases-club-grupos-revista-04.webp" alt=""></div>
-    </div>
-
-    <div class="destacados-title-ctn">
-        <h2 class="destacados-title">La libertad de volar, paso a paso</h2>
-        <p class="destacados-subtitle">Te contamos todo lo que tenés que saber para volar en Flybondi al precio más bajo</p>
+        <div class="element-fourCards-card">
+            <img class="element-fourCards-img" src="img/destacados/bue-sde.webp" alt="">
         </div>
-            
-            <div class="descatacos-card-ctn libertadVolar-ctn">
 
-            <div class="descatacos-card libertadVolar-card">
-                <h2>SELECCIONÁ TU VUELO</h2>
+        <div class="element-fourCards-card">
+            <img class="element-fourCards-img" src="img/destacados/cor-nqn.webp" alt="">
+        </div>
+    </div>
 
-                <div>
-                <img src="/img/libertadvolar/calendar.svg" alt="">
+
+
+    <div class="threeCards-ctn">
+
+        <div class="threeCards-card">
+            <img src="/img/threeCards/equipaje.svg" alt="">
+            <h2>COMPRÁ TUS EXTRAS ONLINE</h2>
+            <p>¿Querés comprar tu valija, elegir tu asiento o viajar con tu mascota? <a href=""
+                    class="threeCards-anchor">Click acá.</a></p>
+        </div>
+
+        <div class="threeCards-card">
+            <img src="/img/threeCards/voucher.svg" alt="">
+            <h2>CONSULTÁ TU VOUCHER</h2>
+            <p>Ingresá <a href="" class="threeCards-anchor">acá</a> los datos de tu voucher para conocer el saldo
+                disponible</p>
+        </div>
+
+        <div class="threeCards-card">
+            <img src="/img/threeCards/promociones.svg" alt="">
+            <h2>PROMOCIONES Y FINANCIACIÓN</h2>
+            <p>Hacé <a href="" class="threeCards-anchor">click acá</a> y conocé todas las promociones y opciones de
+                financiación que tenemos para que viajes aun más ultra low cost.
+            </p>
+
+        </div>
+    </div>
+    <!-- ----------------------VolaATumedida---------------------- -->
+
+    <div class="element-fourCards-title-ctn">
+        <h2 class="element-fourCards-title">Volá a tu medida</h2>
+        <p class="element-fourCards-subtitle">¡Elegí la opción que más te guste y preparate para despegar!</p>
+    </div>
+
+    <div class="element-fourCards-card-ctn">
+        <div class="element-fourCards-card">
+            <img class="element-fourCards-img" src="img/volaATuMedida/cards-home-ultra-pases-club-grupos-revista-01.webp" alt="">
+        </div>
+
+        <div class="element-fourCards-card">
+            <img class="element-fourCards-img"
+                src="/img/volaATuMedida/cards-home-ultra-pases-club-grupos-revista-02.webp" alt="">
+            </div>
+
+        <div class="element-fourCards-card">
+            <img class="element-fourCards-img"
+                src="/img/volaATuMedida/cards-home-ultra-pases-club-grupos-revista-03.webp" alt=""
+                ></div>
+
+        <div class="element-fourCards-card">}
+            <img class="element-fourCards-img"
+                src="/img/volaATuMedida/cards-home-ultra-pases-club-grupos-revista-04.webp" alt=""></div>
+    </div>
+
+    <!-- ----------------------LA LIBERTAD DE VOLAR---------------------- -->
+
+    <div class="element-fourCards-title-ctn">
+        <h2 class="element-fourCards-title">La libertad de volar, paso a paso</h2>
+        <p class="element-fourCards-subtitle">Te contamos todo lo que tenés que saber para volar en Flybondi al precio
+            más bajo</p>
+    </div>
+
+    <div class="element-fourCards-card-ctn libertadVolar-ctn">
+
+        <div class="element-fourCards-card libertadVolar-card">
+            <h2>SELECCIONÁ TU VUELO</h2>
+
+            <div>
+                <img src="/img/libertadvolar/calendar.svg" alt="" class="libertadVolar-img">
                 <p>
                     Elegí a dónde querés ir y cuándo. Acordate que cuanto antes compres, más barato vas a volar.</p>
-                </div>
-        <a href="" class="threeCards-anchor">Conocé nuestros destinos</a>
             </div>
-
-
-            <div class="descatacos-card libertadVolar-card">
-                <h2>¿QUÉ INCLUYE MI PASAJE?</h2>
-
-                <div>
-                    <img src="/img/libertadvolar/valija.svg" alt="">
-                    <p>
-                        Elegí a dónde querés ir y cuándo. Acordate que cuanto antes compres, más barato vas a volar.</p>
-                </div>
             <a href="" class="threeCards-anchor">Conocé nuestros destinos</a>
-            </div>
+        </div>
 
-            <div class="descatacos-card libertadVolar-card">
-                <h2>PAGÁ</h2>
-                <div>
+
+        <div class="descatacos-card libertadVolar-card">
+            <h2>¿QUÉ INCLUYE MI PASAJE?</h2>
+
+            <div>
+                <img src="/img/libertadvolar/valija.svg" alt="">
+                <p>
+                    Elegí a dónde querés ir y cuándo. Acordate que cuanto antes compres, más barato vas a volar.</p>
+            </div>
+            <a href="" class="threeCards-anchor">Conocé nuestros destinos</a>
+        </div>
+
+        <div class="descatacos-card libertadVolar-card">
+            <h2>PAGÁ</h2>
+            <div>
                 <img src="/img/libertadvolar/payments.svg" alt="">
-                <p>Usá tu tarjeta de débito o crédito y recibí nuestra confirmación de compra inmediatamente en tu mail. También podés pagar en efectivo a través de Rapipago o Pago Fácil.</p>
+                <p>Usá tu tarjeta de débito o crédito y recibí nuestra confirmación de compra inmediatamente en tu mail.
+                    También podés pagar en efectivo a través de Rapipago o Pago Fácil.</p>
             </div>
             <a href="" class="threeCards-anchor">Conocé nuestros destinos</a>
-            </div>
-<!-- SECOND ROW -->
-            <div class="descatacos-card libertadVolar-card">
-                <h2>HACÉ TU CHECK-IN</h2>
-                <div>
+        </div>
+        <!-- SECOND ROW -->
+        <div class="descatacos-card libertadVolar-card">
+            <h2>HACÉ TU CHECK-IN</h2>
+            <div>
                 <img src="/img/libertadvolar/ticket.svg" alt="">
                 <p>
-                    A partir de las 48 hs. antes de tu vuelo, entrá a nuestra web y confirmá tu viaje. Ahórrate el costo adicional de realizarlo en el aeropuerto.</p>
+                    A partir de las 48 hs. antes de tu vuelo, entrá a nuestra web y confirmá tu viaje. Ahórrate el costo
+                    adicional de realizarlo en el aeropuerto.</p>
             </div>
             <a href="" class="threeCards-anchor">
                 ¿Qué es el Check-In?</a>
-            </div>
- 
-            <div class="descatacos-card libertadVolar-card">
-                <h2>RECIBÍ TU TARJETA DE EMBARQUE</h2>
-                <div>
+        </div>
+
+        <div class="descatacos-card libertadVolar-card">
+            <h2>RECIBÍ TU TARJETA DE EMBARQUE</h2>
+            <div>
                 <img src="/img/libertadvolar/passport.svg" alt="">
-                <p>Te vamos a enviar por email la tarjeta de embarque para que presentes con tu teléfono o imprimas en tu casa. Ahorrate el costo adicional de realizarlo en el aeropuerto.</p>
+                <p>Te vamos a enviar por email la tarjeta de embarque para que presentes con tu teléfono o imprimas en
+                    tu casa. Ahorrate el costo adicional de realizarlo en el aeropuerto.</p>
             </div>
             <a href="" class="threeCards-anchor">¿Qué es la tarjeta de embarque?</a>
-            </div>
+        </div>
 
-            <div class="descatacos-card libertadVolar-card">
-                <h2>¡NOS VEMOS EN EL AEROPUERTO!</h2>
-                <div>
+        <div class="descatacos-card libertadVolar-card">
+            <h2>¡NOS VEMOS EN EL AEROPUERTO!</h2>
+            <div>
                 <img src="/img/libertadvolar/calendar.svg" alt="">
                 <p>
                     No olvides llevar la documentación necesaria para volar.</p>
             </div>
             <a href="" class="threeCards-anchor">¿Qué documentación necesito para volar?</a>
-            </div>
+        </div>
 
-            </div>
+    </div>
 
-            <div class="newsLetter-ctn">
-           
-                <h2 class="destacados-title">¡No te pierdas de nada!</h2>
-                <p class="destacados-subtitle">Hey! Suscribite a nuestro newsletter para enterarte de todo antes que nadie. Que no se corte!</p>
+    <div class="newsLetter-ctn">
 
-              <form action="" class="form-newsletter">  
-                 <input type="email" placeholder="Ingresa tu eMail" class="destacados-input destacados-mail">
-                 <input type="submit" class="destacados-input destacados-btn">
-                </form>
-             
-            </div>
+        <h2 class="element-fourCards-title">¡No te pierdas de nada!</h2>
+        <p class="element-fourCards-subtitle">Hey! Suscribite a nuestro newsletter para enterarte de todo antes que
+            nadie. Que no se corte!</p>
+
+        <form action="" class="form-newsletter">
+            <input type="email" placeholder="Ingresa tu eMail" class="element-fourCards-input element-fourCards-mail">
+            <input type="submit" class="element-fourCards-input element-fourCards-btn">
+        </form>
+
+    </div>
 
 
 
-<!-- ----------------------FOOTER---------------------- -->
+    <!-- ----------------------FOOTER---------------------- -->
     <footer id="footer">
         <div id="footer-ctn">
             <div id="footer-somos-ctn">
                 <h2 id="footer-somos-title">
-                    Somos Flybondo
+                    Somos Flybondi
                 </h2>
-                <p id="footer-somos-txt">  
-                    Somos los que no dejan que las distancias nos separen de los que más queremos. Somos los que hoy estamos acá y mañana podemos estar allá. Somos la libertad de volar!
+                <p id="footer-somos-txt">
+                    Somos los que no dejan que las distancias nos separen de los que más queremos. Somos los que hoy
+                    estamos acá y mañana podemos estar allá. Somos la libertad de volar!
                 </p>
                 <a href="" id="footer-somos-btn">Conocenos!</a>
             </div>
@@ -351,13 +410,13 @@
                 <h2 class="footer-card-title">
                     Nosotros
                 </h2>
-        
-        <a href="" class="footer-card-anchor">Sobre Flybondi</a>
-        <a href="" class="footer-card-anchor">Prensa</a>
-        <a href="" class="footer-card-anchor">Sumate al equipo</a>
-        <a href="" class="footer-card-anchor">Información legal</a>
-        <a href="" class="footer-card-anchor">¿Preguntas?</a>
-        <a href="" class="footer-card-anchor">Blog</a>
+
+                <a href="" class="footer-card-anchor">Sobre Flybondi</a>
+                <a href="" class="footer-card-anchor">Prensa</a>
+                <a href="" class="footer-card-anchor">Sumate al equipo</a>
+                <a href="" class="footer-card-anchor">Información legal</a>
+                <a href="" class="footer-card-anchor">¿Preguntas?</a>
+                <a href="" class="footer-card-anchor">Blog</a>
             </div>
 
 
@@ -365,54 +424,62 @@
                 <h2 class="footer-card-title">
                     Armá tu viaje
                 </h2>
-                        <a href="" class="footer-card-anchor">Buscar vuelos</a>
-                        <a href="" class="footer-card-anchor">Destinos</a>
-                        <a href="" class="footer-card-anchor">Revista SOMOS</a>
-                        <a href="" class="footer-card-anchor">Menú a bordo</a>
-                        <a href="" class="footer-card-anchor">Grupos</a>
+                <a href="" class="footer-card-anchor">Buscar vuelos</a>
+                <a href="" class="footer-card-anchor">Destinos</a>
+                <a href="" class="footer-card-anchor">Revista SOMOS</a>
+                <a href="" class="footer-card-anchor">Menú a bordo</a>
+                <a href="" class="footer-card-anchor">Grupos</a>
             </div>
             <div class="footer-cards">
                 <h2 class="footer-card-title">
                     Somos ultra low cost
                 </h2>
-                        <a href="" class="footer-card-anchor">¿Qué es ser Ultra Low Cost?</a>
-                        <a href="" class="footer-card-anchor">Aeropuertos</a>
+                <a href="" class="footer-card-anchor">¿Qué es ser Ultra Low Cost?</a>
+                <a href="" class="footer-card-anchor">Aeropuertos</a>
             </div>
         </div>
 
         <div id="footer-ctn-redes">
 
             <a href="" class="footer-ctn-redes-anchor"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                width="30" height="30"
-                viewBox="0 0 30 30"
-              >    <path d="M12,27V15H8v-4h4V8.852C12,4.785,13.981,3,17.361,3c1.619,0,2.475,0.12,2.88,0.175V7h-2.305C16.501,7,16,7.757,16,9.291V11 h4.205l-0.571,4H16v12H12z"></path></svg></a>
+                    width="30" height="30" viewBox="0 0 30 30">
+                    <path
+                        d="M12,27V15H8v-4h4V8.852C12,4.785,13.981,3,17.361,3c1.619,0,2.475,0.12,2.88,0.175V7h-2.305C16.501,7,16,7.757,16,9.291V11 h4.205l-0.571,4H16v12H12z">
+                    </path>
+                </svg></a>
 
             <a href="" class="footer-ctn-redes-anchor"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                width="30" height="30"
-                viewBox="0 0 30 30"
-               >    <path d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z"></path></svg></a>
-        
+                    width="30" height="30" viewBox="0 0 30 30">
+                    <path
+                        d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z">
+                    </path>
+                </svg></a>
+
             <a href="" class="footer-ctn-redes-anchor"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                width="30" height="30"
-                viewBox="0 0 72 72"
-                ><path d="M61.115,18.856C63.666,21.503,64,25.709,64,36s-0.334,14.497-2.885,17.144C58.563,55.791,55.906,56,36,56	s-22.563-0.209-25.115-2.856C8.334,50.497,8,46.291,8,36s0.334-14.497,2.885-17.144S16.094,16,36,16S58.563,16.209,61.115,18.856z M31.464,44.476l13.603-8.044l-13.603-7.918V44.476z"></path></svg></a>
+                    width="30" height="30" viewBox="0 0 72 72">
+                    <path
+                        d="M61.115,18.856C63.666,21.503,64,25.709,64,36s-0.334,14.497-2.885,17.144C58.563,55.791,55.906,56,36,56	s-22.563-0.209-25.115-2.856C8.334,50.497,8,46.291,8,36s0.334-14.497,2.885-17.144S16.094,16,36,16S58.563,16.209,61.115,18.856z M31.464,44.476l13.603-8.044l-13.603-7.918V44.476z">
+                    </path>
+                </svg></a>
 
 
             <a href="" class="footer-ctn-redes-anchor"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                width="30" height="30"
-                viewBox="0 0 30 30"
-            >    <path d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z"></path></svg></a>
+                    width="30" height="30" viewBox="0 0 30 30">
+                    <path
+                        d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z">
+                    </path>
+                </svg></a>
         </div>
 
         <div class="footer-lineaDivisoria"></div>
         <div id="rightsFlybondi">
-            <p>
-                (̿▀̿ ̿Ĺ̯̿̿▀̿ ̿)̄   Ciclista sin licencia
-            </p>
+<p>@oneDEV</p>
+         
         </div>
 
 
     </footer>
 
 </body>
+
 </html>
