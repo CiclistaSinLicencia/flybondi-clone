@@ -4,8 +4,8 @@
   box-sizing: border-box;
   font-family: Poppins;
   /* desactivar touchScreen buttons */
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
--webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -56,7 +56,9 @@ body {
   width: 150px;
 }
 
-/* Nav */
+/*-------------------------
+          NAV
+--------------------------*/
 #nav-ctn {
 
   gap: 20px;
@@ -86,96 +88,111 @@ body {
 #nav-select:focus-visible {
   border: 1px solid var(--orange-flybondi);
 }
-.dropdown-mireserva-btn{
+
+.dropdown-mireserva-btn {
   position: relative;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0);
   border: none;
   font-size: 16px;
 }
-.dropdown-mireserva-btn:focus-within > .dropdown-reserva {
-display: flex;
+
+.dropdown-mireserva-btn:focus-within>.dropdown-reserva {
+  display: flex;
 }
-.dropdown-mireserva-btn > span{
+
+.dropdown-mireserva-btn>span {
   font-size: 13px;
 }
 
-.dropdown-mireserva-btn:focus{
- color:#f7b914;;
+.dropdown-mireserva-btn:focus {
+  color: #f7b914;
+  ;
 }
 
-.dropdown-reserva{
-display: none;
+.dropdown-reserva {
+  display: none;
   position: absolute;
-gap: 15px;
+  gap: 15px;
   flex-direction: column;
   background-color: white;
   padding: 10px 30px;
   border-radius: 10px;
-text-align: left;
-height: 235px;
-padding-top: 20px;
-transform: translateX(-40px);
-box-shadow: 3px 3px 20px 1px rgba(31, 31, 31, 0.164);
-z-index: 90;
+  text-align: left;
+  height: 235px;
+  padding-top: 20px;
+  transform: translateX(-40px);
+  box-shadow: 3px 3px 20px 1px rgba(31, 31, 31, 0.164);
+  z-index: 90;
 
-top: 45px;
+  top: 45px;
 }
-#dropdown-country{
+
+#dropdown-country {
   height: 120px;
 }
-.dropdown-reserva a{
+
+.dropdown-reserva a {
   color: #777;
 
   text-decoration: none;
   font-weight: 500;
-z-index: 99;
-pointer-events: all;
+  z-index: 99;
+  pointer-events: all;
 }
-.dropdown-reserva a:hover{
+
+.dropdown-reserva a:hover {
   color: #333;
 }
 
-#logo-arg{
+#logo-arg {
   width: 25px;
   position: absolute;
   left: -25px;
 }
-#logo-br{
+
+#logo-br {
   width: 25px;
   position: absolute;
   left: 20px;
 }
-#logo-par{
+
+#logo-par {
   width: 25px;
   position: absolute;
   left: 20px;
   top: 60px;
 }
 
-#country-dropdown{
+#country-dropdown {
   margin-left: 25px;
 
 }
-#dropdown-country{
-left: -60px;
+
+#dropdown-country {
+  left: -60px;
 }
 
-.country-dropdown-btn{
+.country-dropdown-btn {
   padding-left: 20px;
 }
-/* -------------------Banner-------------------  */
-.banner-ctn {
-width: 100%;
 
-padding-top: 55px;
+/*-------------------------
+          BANNER
+--------------------------*/
+.banner-ctn {
+  width: 100%;
+
+  padding-top: 55px;
 }
 
 
-/* -------------------CAROUSEL-------------------  */
+/*-------------------------
+          CAROUSEL
+--------------------------*/
 .section-carousel {
   width: 100%;
-height: 100%;
+  height: 100%;
   /* ancho imagen */
 }
 
@@ -217,6 +234,7 @@ height: 100%;
   right: 30px;
   width: 60px;
 }
+
 .prev {
   left: 30px;
   width: 60px;
@@ -226,8 +244,8 @@ height: 100%;
   position: absolute;
   inset: 0;
   opacity: 0;
-  
-  transition: 0.5s  ease-in-out;
+
+  transition: 0.5s ease-in-out;
 
 }
 
@@ -243,8 +261,10 @@ height: 100%;
   object-fit: cover;
   object-position: center;
 }
-/* -------------------searchBar-------------------  */
 
+/*-------------------------
+          Search Bar
+--------------------------*/
 #searchBar-ctn {
   display: flex;
   align-items: center;
@@ -413,7 +433,7 @@ height: 100%;
   bottom: 0px;
   border-radius: 50px;
   padding: 10px 0px;
-
+text-decoration: none;
   font-size: 17px;
   font-weight: 600;
   width: 100%;
@@ -434,8 +454,9 @@ height: 100%;
 }
 
 
-/* -------------------DESTACADO-------------------  */
-
+/*-------------------------
+          DESTACADO
+--------------------------*/
 .element-fourCards-title-ctn {
   width: 100%;
   height: 100%;
@@ -474,16 +495,16 @@ height: 100%;
   width: 310px;
   height: 100%;
   cursor: pointer;
-display: flex;
-align-items: center;
-justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .element-fourCards-img:hover {
   filter: sepia(0.5);
 }
 
-.element-fourCards-img{
+.element-fourCards-img {
   transition: 0.5s;
   border-radius: 20px;
   width: 300px;
@@ -491,7 +512,9 @@ justify-content: center;
 
 }
 
-/* -------------------THREECARDS-------------------  */
+/*-------------------------
+          ThreeCards
+--------------------------*/
 .threeCards-ctn {
   display: flex;
   flex-direction: row;
@@ -533,91 +556,101 @@ justify-content: center;
   text-decoration-line: underline;
   font-weight: 600;
 }
-/* -------------------Libertad de Volar-------------------  */
 
-.libertadVolar-ctn{
-cursor:auto;
-padding-inline: 1em;
-padding: 1em 0px 5em 0px;
+/*-------------------------
+          LIBERTAD DE VOLAR
+--------------------------*/
+.libertadVolar-ctn {
+  cursor: auto;
+  padding-inline: 1em;
+  padding: 1em 0px 5em 0px;
 }
 
-.libertadVolar-card{
-background-color: #f4f3f3;
-height: 100%;
-min-height: 210px;
-width: 420px;
-border-radius: 20px;
-display: flex;
-flex-wrap: wrap;
-display: flex;
-align-items: flex-start;
-justify-content: center;
-gap: 0px;
+.libertadVolar-card {
+  background-color: #f4f3f3;
+  height: 100%;
+  min-height: 210px;
+  width: 420px;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0px;
 }
 
-.libertadVolar-card h2{
-font-weight: 500;
-font-size: 20px;
-text-align: center;
-margin: 0;
-padding-top: 10px;
-color: #444;
+.libertadVolar-card h2 {
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  padding-top: 10px;
+  color: #444;
 }
-.libertadVolar-card div{
+
+.libertadVolar-card div {
   display: flex;
   flex-direction: row;
-  padding-inline:20px;
+  padding-inline: 20px;
 }
-.libertadVolar-card img{
-width: 80px;
-height: 80px;
-border-radius: 0;
+
+.libertadVolar-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 0;
 }
-.libertadVolar-card p{
+
+.libertadVolar-card p {
   font-size: 14px;
   width: 100%;
   padding-left: 20px;
   color: #444;
 }
-/* -------------------NewsLetter-------------------  */
-.newsLetter-ctn{
+
+/*-------------------------
+          NewsLetter
+--------------------------*/
+.newsLetter-ctn {
   width: 100%;
   display: flex;
   align-items: center;
-justify-content: center;
+  justify-content: center;
   flex-direction: column;
   background-color: rgb(235, 235, 235);
   height: 200px;
 }
 
-.form-newsletter{
+.form-newsletter {
   width: 80%;
   max-width: 40rem;
 
 }
-.element-fourCards-input
-{
-padding: 10px 20px;
-font-weight: 500;
-font-size: 16px;
-border: 0px solid gray;
-color: #333;
+
+.element-fourCards-input {
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 16px;
+  border: 0px solid gray;
+  color: #333;
 
 }
 
-.element-fourCards-input:focus{
+.element-fourCards-input:focus {
   border: 0px;
   outline: 1px solid var(--lightOrange-flybondi);
 }
 
-.element-fourCards-input::placeholder{
+.element-fourCards-input::placeholder {
   color: #999;
 }
-.element-fourCards-mail{
+
+.element-fourCards-mail {
   border-radius: 10px 0px 0px 10px;
   width: 70%;
 }
-.element-fourCards-btn{
+
+.element-fourCards-btn {
   border-radius: 0px 10px 10px 0px;
   background-color: var(--lightOrange-flybondi);
   margin: -10px;
@@ -626,12 +659,14 @@ color: #333;
   transition: 0.2s;
   color: #333;
 }
-.element-fourCards-btn:hover{
+
+.element-fourCards-btn:hover {
   background-color: var(--orange-flybondi);
 }
 
-/* -------------------FOOTER-------------------  */
-
+/*-------------------------
+          FOOTER
+--------------------------*/
 #footer {
   width: 100%;
   height: 100%;
@@ -729,6 +764,7 @@ color: #333;
   display: flex;
   align-items: flex-end;
   justify-content: end;
+  
 }
 
 .footer-ctn-redes-anchor svg {
@@ -751,14 +787,14 @@ color: #333;
 
   text-align: center;
   height: 10px;
-display: flex;
-align-items: center;
-justify-content: center;
-padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
 }
 
-#rightsFlybondi img{
-height: 30px;
+#rightsFlybondi img {
+  height: 30px;
 
 }
 
@@ -770,31 +806,9 @@ height: 30px;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*-------------------------
+ DROPDOWN MOBILE
+--------------------------*/
 .dropdown {
   position: relative;
   width: 100%;
@@ -874,7 +888,7 @@ height: 30px;
   font-size: 14px;
   padding: 1em 2em;
   background-color: white;
-color: #333;
+  color: #333;
   border: none;
   font-weight: bold;
   transition: 0.1s linear;
@@ -926,7 +940,9 @@ color: #333;
   transform: scale(0);
 }
 
-/* -------------------AnimacionBurger-------------------  */
+/*-------------------------
+       AnimacionBurger
+--------------------------*/
 @keyframes rotate-1 {
 
   /* X */
@@ -995,107 +1011,71 @@ color: #333;
   }
 }
 
-
-
-
-
-/* #seachBar-top-ctn{
-  position: absolute;
-  display: flex;
-  top: -99px;
-  z-index: 99;
-  background-color: #4f2d074f;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+.selectLenguaje-ctn {
   width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-   */
-   .selectLenguaje-ctn{
-    width: 100%;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   }
-   .selectLenguaje {
-    background-color: white;
-    text-align: center;
-    padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    font-weight: 600;
-    color: #444;
-    border: 2px solid gray;
 
-   }
-   .selectLenguaje:focus-visible{
-    border: 2px solid orange;
-    outline: 0px;
-   }
+.selectLenguaje {
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  font-weight: 600;
+  color: #444;
+  border: 2px solid gray;
+
+}
+
+.selectLenguaje:focus-visible {
+  border: 2px solid orange;
+  outline: 0px;
+}
 
 
 
-
+/*-------------------------
+   RESPONSIVE MOBILE
+--------------------------*/
 
 @media (max-width: 891px) {
-
-
-  .element-fourCards-img {
-    transition: 0.5s;
-    border-radius: 20px;
-    width: 300px;
-    object-fit: cover;
-  height: 150px;
-  }
-
-
-  .threeCards-card{
-    text-align: center;
-  }
-
-  .carousel-button {
-    font-size: 2.5em;
-  }
-
-  .carousel {
-    /* height: 32em; */
-    height: 250px;
-    width: 100%;
-    position: relative;
-  }
-
-  .searchBar-btn {
-    margin-bottom: 20px;
-  }
-
-  .header {
-    padding-inline: 1em;
-  }
-
-  #seachBar-top-ctn {
-
-    top: -38px;
-
-  }
-
-  #banner-ctn img {
-    width: 100%;
-
-    height: 500px;
-flex-shrink: 1;
-
-  }
-
-
+/* Header */
+.header {
+  padding-inline: 1em;
+}
+/* Nav Desktop*/
+#nav-ctn {
+  display: none;
+}
+/* dropdown Mobile*/
+.dropdown {
+  display: flex;
+}
+/* Banner Carousel*/
+#banner-ctn img {
+  width: 100%;
+  height: 500px;
+  flex-shrink: 1;
+}
+.carousel-button {
+  font-size: 2.5em;
+}
+.carousel {
+  height: 250px;
+  width: 100%;
+  position: relative;
+}
   /* SearchBar */
-
   .searchBar-select-main-ctn {
     flex-direction: column;
   }
-
   #searchBar {
     display: flex;
     align-items: center;
@@ -1104,31 +1084,37 @@ flex-shrink: 1;
     height: 100%;
     width: 100%;
     position: relative;
-
   }
-
   .searchBar-select-ctn {
     flex-direction: column;
-
   }
 
-  /*  */
-
-  .dropdown {
-    display: flex;
+  .searchBar-btn {
+    margin-bottom: 20px;
   }
 
-  #nav-ctn {
-    display: none;
+  #seachBar-top-ctn {
+    top: -38px;
   }
 
-
+  /* FourCards */
+  .element-fourCards-img {
+    transition: 0.5s;
+    border-radius: 20px;
+    width: 300px;
+    object-fit: cover;
+    height: 150px;
+  }
   .element-fourCards-title-ctn {
     text-align: center;
   }
 
-  /* -------------------Footer-------------------  */
 
+/* threeCards */
+  .threeCards-card {
+    text-align: center;
+  }
+/* Footer */
   #footer-ctn-redes {
     justify-content: center;
   }
@@ -1136,35 +1122,11 @@ flex-shrink: 1;
 
 
 @media (max-width:450px) {
+  /* Carousel */
   .carousel {
     height: 220px;
   }
-
-  #seachBar-top-ctn {
-    margin-top: 20px;
-  }
-  #seachBar-top-ctn button {
-
-    padding: 0.6em 3em;
-  }
-
-
-  #seachBar-top-ctn {
-    display: flex;
-    
-  }
-
-  #searchBar {
-    border: 0px;
-    padding-top: 40px;
-  }
-
-  #searchBar-ctn {
-    margin-inline: 0;
-  }
-
-
-
+  /* SearchBar */
   #vuelos {
     border-radius: 0px;
     border: 0px;
@@ -1172,14 +1134,30 @@ flex-shrink: 1;
     width: 50%;
     gap: 0;
   }
-
   #ultraPases {
     border-radius: 0px;
     border: 0px;
     margin: 0px;
     width: 50%;
   }
-  .libertadVolar-card{
+  #seachBar-top-ctn {
+    margin-top: 20px;
+  }
+  #seachBar-top-ctn button {
+    padding: 0.6em 3em;
+  }
+  #seachBar-top-ctn {
+    display: flex;
+  }
+  #searchBar {
+    border: 0px;
+    padding-top: 40px;
+  }
+  #searchBar-ctn {
+    margin-inline: 0;
+  }
+/* libertad de volar */
+  .libertadVolar-card {
     border-radius: 0px;
   }
 
@@ -1187,21 +1165,20 @@ flex-shrink: 1;
 
 
 
-@media(max-width: 360px){
-
-
+@media(max-width: 360px) {
 
   .carousel {
     height: 190px;
   }
 
-  #banner-ctn{
-height: 100%;
+  #banner-ctn {
+    height: 100%;
 
   }
+
   #banner-ctn img {
     width: 100%;
     height: 250px;
- object-position: center;
+    object-position: center;
   }
 }
