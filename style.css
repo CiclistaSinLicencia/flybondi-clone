@@ -74,7 +74,7 @@ body {
   font-weight: 400;
 }
 
-.nav-btn:hover{
+.nav-btn:hover {
   color: var(--nav-btn-hover);
 }
 
@@ -494,36 +494,37 @@ body {
   padding-inline: 20px;
 }
 
+
+
 .element-fourCards-card-ctn {
   width: 100%;
   display: flex;
   gap: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-
+  padding-inline: 20px;
 }
 
 .element-fourCards-card {
-  width: 310px;
-  height: 100%;
+width: 20%;
+min-width: 200px;
+height: 100%;
+height: auto;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.element-fourCards-img:hover {
-  filter: sepia(0.5);
+  overflow: hidden;
 }
 
 .element-fourCards-img {
   transition: 0.5s;
   border-radius: 20px;
-  width: 300px;
-  object-fit: contain;
-
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.element-fourCards-img:hover {
+  filter: sepia(0.5);
 }
 
 /*-------------------------
@@ -541,6 +542,7 @@ body {
   flex-wrap: wrap;
   padding-bottom: 80px;
   padding-top: 80px;
+ 
 }
 
 .threeCards-card {
@@ -800,15 +802,15 @@ body {
 #rightsFlybondi {
 
   text-align: center;
-  height: 10px;
+  height: 0px;
   display: flex;
-  align-items: center;
+
   justify-content: center;
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 #rightsFlybondi img {
-  height: 30px;
+  height: 25px;
 
 }
 
@@ -1030,7 +1032,7 @@ body {
   display: flex;
 
   justify-content: center;
-padding-top: 50px;
+  padding-top: 50px;
 }
 
 .selectLenguaje {
