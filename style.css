@@ -480,7 +480,8 @@ h2 {
 .component-title {
   text-align: center;
   margin-top: 5rem;
-  font-size: clamp(18px, 2vw, 20px);
+  font-size: clamp(12px, 5vw, 1rem);
+  
 }
 
 .component-title h1 {}
@@ -501,15 +502,13 @@ grid-template-rows: 16rem;
   .Component-FourCards {
     grid-template-columns: repeat(2, minmax(10rem,20rem));
 
-
-   
   }
 }
 @media(max-width: 500px){
   .Component-FourCards{
     grid-template-columns: repeat(1, minmax(10rem,25rem));
 
-    grid-template-rows:repeat(4, 14rem);
+    grid-template-rows:repeat(4, 12rem);
   }
   
 }
@@ -644,11 +643,12 @@ grid-template-rows: 16rem;
 /*-------------------------
           NewsLetter
 --------------------------*/
-.newsletter-title {}
-
-.newsletter-title+span {
+.newsletter-title{
+  font-size:clamp(22px, 2vw, 24px) ;
+}
+.newsletter-title + span {
   text-align: center;
-  font-size: clamp(15px, 2vw, 16px);
+  font-size: clamp(13px, 2vw, 15px);
   padding-inline: 20px;
   padding: 15px 20px;
 }
@@ -668,7 +668,6 @@ grid-template-rows: 16rem;
 .form-newsletter {
   width: 80%;
   max-width: 40rem;
-
 }
 
 .element-fourCards-input {
