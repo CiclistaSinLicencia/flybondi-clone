@@ -1,6 +1,7 @@
 *,
 *::before,
 *::after {
+
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   /* desactivar touchScreen buttons */
@@ -9,7 +10,11 @@
 }
 
 body {
-  margin: 0;
+  margin: 0px;
+}
+
+h2 {
+  margin: 0px;
 }
 
 :root {
@@ -18,8 +23,6 @@ body {
   --nav-btn-hover:
     #e4af20;
 }
-
-
 
 ::-webkit-scrollbar {
   background-color: #555;
@@ -385,8 +388,11 @@ body {
 }
 
 /* -------------------MEDIA-------------------  */
+.content-wrapp {
+  padding-inline: clamp(1rem, 5vw, 5rem);
+}
 
-
+/*  */
 .searchBar-select-ctn {
   gap: 20px;
   min-width: 180px;
@@ -471,59 +477,53 @@ body {
 /*-------------------------
           DESTACADO
 --------------------------*/
-.element-fourCards-title-ctn {
+.component-title {
+  text-align: center;
+  margin-top: 5rem;
+  font-size: clamp(18px, 2vw, 20px);
+}
+
+.component-title h1 {}
+
+
+.Component-FourCards {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(12rem,18rem));
+
+grid-template-rows: 16rem;
+
+  gap: 1rem;
+  justify-content: center;
+}
+
+ @media(max-width: 880px) {
+  .Component-FourCards {
+    grid-template-columns: repeat(2, minmax(10rem,20rem));
+
+
+   
+  }
+}
+@media(max-width: 500px){
+  .Component-FourCards{
+    grid-template-columns: repeat(1, minmax(10rem,25rem));
+
+    grid-template-rows:repeat(4, 14rem);
+  }
+  
+}
+
+.Component-FourCards img {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-}
-
-.element-fourCards-title {
-  font-weight: 600;
-  color: #333;
-  margin: 0;
-}
-
-.element-fourCards-subtitle {
-  color: #666;
-  font-weight: 500;
-  text-align: center;
-  padding-inline: 20px;
-}
-
-
-
-.element-fourCards-card-ctn {
-  width: 100%;
-  display: flex;
-  gap: 20px;
-  padding-bottom: 20px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding-inline: 20px;
-}
-
-.element-fourCards-card {
-width: 20%;
-min-width: 200px;
-height: 100%;
-height: auto;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.element-fourCards-img {
-  transition: 0.5s;
-  border-radius: 20px;
-  max-width: 100%;
-  height: auto;
   object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+  transition: 0.5s filter;
 }
-.element-fourCards-img:hover {
+
+.Component-FourCards img:hover {
   filter: sepia(0.5);
 }
 
@@ -540,9 +540,8 @@ height: auto;
   justify-content: center;
   gap: 50px;
   flex-wrap: wrap;
-  padding-bottom: 80px;
-  padding-top: 80px;
- 
+
+
 }
 
 .threeCards-card {
@@ -550,11 +549,10 @@ height: auto;
   color: #333;
 }
 
-.threeCards-card h2 {
+.threeCards-card>h2 {
   font-size: 18px;
   text-align: center;
   font-weight: 600;
-
 }
 
 .threeCards-card p {
@@ -574,31 +572,40 @@ height: auto;
 }
 
 /*-------------------------
-          LIBERTAD DE VOLAR
+     LIBERTAD DE VOLAR
 --------------------------*/
-.libertadVolar-ctn {
-  cursor: auto;
-  padding-inline: 1em;
-  padding: 1em 0px 5em 0px;
+.libertad-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(20rem, 1fr));
+  gap: 1rem;
+
+}
+
+@media(max-width: 1200px) {
+  .libertad-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    justify-content: center;
+  }
+  .libertadVolar-card a{
+    padding: 10px;
+  }
 }
 
 .libertadVolar-card {
   background-color: #f4f3f3;
-  height: 100%;
-  min-height: 210px;
-  width: 420px;
   border-radius: 20px;
   display: flex;
+
   flex-wrap: wrap;
-  display: flex;
+  padding-bottom: 0.5rem;
   align-items: flex-start;
   justify-content: center;
   gap: 0px;
 }
 
 .libertadVolar-card h2 {
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 600;
+  font-size:clamp(17px,2vw,20px);
   text-align: center;
   margin: 0;
   padding-top: 10px;
@@ -615,6 +622,8 @@ height: auto;
   width: 80px;
   height: 80px;
   border-radius: 0;
+  padding-top: 10px;
+
 }
 
 .libertadVolar-card p {
@@ -624,9 +633,27 @@ height: auto;
   color: #444;
 }
 
+.libertadVolar-card a {
+  text-align: center;
+  font-size: clamp(15px, 2vw, 16px);
+    padding-bottom:5px;
+}
+
+
+
 /*-------------------------
           NewsLetter
 --------------------------*/
+.newsletter-title {}
+
+.newsletter-title+span {
+  text-align: center;
+  font-size: clamp(15px, 2vw, 16px);
+  padding-inline: 20px;
+  padding: 15px 20px;
+}
+
+
 .newsLetter-ctn {
   width: 100%;
   display: flex;
@@ -635,6 +662,7 @@ height: auto;
   flex-direction: column;
   background-color: rgb(235, 235, 235);
   height: 200px;
+  margin-top: 5rem;
 }
 
 .form-newsletter {
@@ -688,14 +716,16 @@ height: auto;
   height: 100%;
   padding-bottom: 2em;
   background-color: #222;
+
 }
 
 #footer-ctn {
-  padding: 2em 2em 0em 2em;
+  padding: 2em 2em 1em 2em;
   display: flex;
   color: white;
   flex-wrap: wrap;
-  row-gap: 50px;
+  column-gap: 70px;
+  row-gap: 40px
 }
 
 #footer-somos-ctn {
@@ -740,7 +770,6 @@ height: auto;
 }
 
 .footer-cards {
-  padding-left: 3em;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -772,21 +801,51 @@ height: auto;
 
 
 #footer-ctn-redes {
-  width: 100%;
   display: flex;
-  gap: 30px;
-  padding-inline: 2em;
-  padding-top: 2em;
-  display: flex;
-  align-items: flex-end;
-  justify-content: end;
+  gap: 10px;
+
+  flex-direction: column;
+  margin-left: auto;
+}
+
+/* mediafooter */
+@media(max-width: 600px) {
+
+  .footer-cards {
+    text-align: center;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  #footer-ctn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+  }
+
+  #footer-ctn-redes {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* end Media */
+
+
+.footer-ctn-redes-anchor svg {
+  scale: 1.2;
+  fill: #e1e1e1;
+  transition: 0.2s;
 
 }
 
-.footer-ctn-redes-anchor svg {
-  scale: 1.5;
-  fill: #e1e1e1;
-  transition: 0.2s;
+#Logo {
+  scale: 1.1;
 }
 
 .footer-ctn-redes-anchor:hover svg {
@@ -955,6 +1014,7 @@ height: auto;
   transform: scale(0);
 }
 
+
 /*-------------------------
        AnimacionBurger
 --------------------------*/
@@ -1122,29 +1182,12 @@ height: auto;
     top: -38px;
   }
 
-  /* FourCards */
-  .element-fourCards-img {
-    transition: 0.5s;
-    border-radius: 20px;
-    width: 300px;
-    object-fit: cover;
-    height: 150px;
-  }
-
-  .element-fourCards-title-ctn {
-    text-align: center;
-  }
-
 
   /* threeCards */
   .threeCards-card {
     text-align: center;
   }
 
-  /* Footer */
-  #footer-ctn-redes {
-    justify-content: center;
-  }
 }
 
 
@@ -1190,11 +1233,6 @@ height: auto;
 
   #searchBar-ctn {
     margin-inline: 0;
-  }
-
-  /* libertad de volar */
-  .libertadVolar-card {
-    border-radius: 0px;
   }
 
 }
