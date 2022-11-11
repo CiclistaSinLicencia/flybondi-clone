@@ -389,7 +389,7 @@ h2 {
 
 /* -------------------MEDIA-------------------  */
 .content-wrapp {
-  padding-inline: clamp(1rem, 5vw, 5rem);
+  padding-inline: clamp(1rem, 5vw, 30rem);
 }
 
 /*  */
@@ -576,15 +576,15 @@ grid-template-rows: 16rem;
 --------------------------*/
 .libertad-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, minmax(20rem, 1fr));
+  grid-template-columns: repeat(3, minmax(15rem, 24.5rem));
   gap: 1rem;
-
+  justify-content: center;
 }
 
 @media(max-width: 1200px) {
   .libertad-wrapper {
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    
   }
   .libertadVolar-card a{
     padding: 10px;
