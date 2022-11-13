@@ -12,7 +12,7 @@ Algunas diferencias con el original: </b>
   🔹La seccion ¿Cómo hacemos para darte los precios más bajos? fue removida <br>
   para darle mas simpleza a la pagina. En el footer se encuentra el mismo boton si se desea acceder <br>
   <br>
-  🔸Se redujo 9 botones el nav a 5 usando dropdown menus y agrupando por categorias <br>
+  🔸Se redujo de 9 botones el nav a 5 usando dropdown menus y agrupando por categorias <br>
   En mi reserva ahora se puede ver el checkIn estado de vuelo y pertinentes<br>
   <br>
   🔹 Logos de redes sociales mas pequeños <br>
