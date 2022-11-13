@@ -345,6 +345,7 @@ h2 {
   margin: -5px;
   color: #777;
   transition: 0.2s;
+ 
 }
 
 #ultraPases:hover {
@@ -582,7 +583,7 @@ grid-template-rows: 16rem;
 
 @media(max-width: 1200px) {
   .libertad-wrapper {
-    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 100%));
     
   }
   .libertadVolar-card a{
@@ -912,9 +913,10 @@ grid-template-rows: 16rem;
   transform: translateX(120%);
   top: calc(100% + 0.9em);
   justify-content: right;
-  display: flex;
+  visibility: hidden;
   flex-direction: column;
   z-index: 10;
+  display: flex;
   transition: 0.4s ease-in-out;
   /* velocidad de apertura Menu */
 }
@@ -933,6 +935,8 @@ grid-template-rows: 16rem;
 
 #dropdown-mobile:checked~.dropdown-menu {
   transform: translate(32px);
+  visibility:visible;
+  
 }
 
 .dropdown-closeBtn-backG {
@@ -1167,6 +1171,7 @@ grid-template-rows: 16rem;
     height: 100%;
     width: 100%;
     position: relative;
+    padding-top: 40px;
   }
 
   .searchBar-select-ctn {
@@ -1202,32 +1207,36 @@ grid-template-rows: 16rem;
     border-radius: 0px;
     border: 0px;
     margin: 0;
-    width: 50%;
+    width: 100%;
     gap: 0;
+    padding: 50px 0px;
   }
 
   #ultraPases {
     border-radius: 0px;
     border: 0px;
     margin: 0px;
-    width: 50%;
+    width: 100%;
+    padding: 50px 0px;
   }
 
   #seachBar-top-ctn {
-    margin-top: 20px;
+    margin-top: 30px;
+   
   }
 
   #seachBar-top-ctn button {
-    padding: 0.6em 3em;
+    padding: 0.5em 0em;
   }
+ 
 
   #seachBar-top-ctn {
     display: flex;
+    width: 100%;
   }
 
   #searchBar {
     border: 0px;
-    padding-top: 40px;
   }
 
   #searchBar-ctn {
@@ -1240,10 +1249,7 @@ grid-template-rows: 16rem;
 
 @media(max-width: 360px) {
 
-  .carousel {
-    height: 190px;
-  }
-
+  
   #banner-ctn {
     height: 100%;
 
