@@ -581,13 +581,19 @@ grid-template-rows: 16rem;
   justify-content: center;
 }
 
-@media(max-width: 1200px) {
+@media(max-width:1200px){
+  .libertad-wrapper {
+    
+    grid-template-columns: repeat(2, minmax(15rem, 24.5rem));
+   
+  }
+  
+}
+
+@media(max-width: 700px) {
   .libertad-wrapper {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 100%));
     
-  }
-  .libertadVolar-card a{
-    padding: 10px;
   }
 }
 
@@ -636,7 +642,7 @@ grid-template-rows: 16rem;
 .libertadVolar-card a {
   text-align: center;
   font-size: clamp(15px, 2vw, 16px);
-    padding-bottom:5px;
+  padding: 10px;
 }
 
 
