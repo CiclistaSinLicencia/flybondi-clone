@@ -261,20 +261,25 @@ h2 {
   position: absolute;
   inset: 0;
   opacity: 0;
-
   transition: 0.5s ease-in-out;
 
 }
 
+.slide-anchor{
+  width: 100%;
+  height: 100%;
+ 
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+}
 .slide[data-active] {
   opacity: 1;
-
 }
 
 .slide>img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
   object-position: center;
 }
@@ -289,6 +294,7 @@ h2 {
   position: relative;
   padding-bottom: 20vh;
   margin-inline: 5%;
+  z-index: 2;
 }
 
 #banner-ctn {
