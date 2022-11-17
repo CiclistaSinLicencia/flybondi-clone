@@ -100,7 +100,11 @@ h2 {
   font-size: 16px;
 }
 
-.dropdown-mireserva-btn:focus-within>.dropdown-reserva {
+.dropdown-mireserva-btn:hover >.dropdown-reserva {/* Focus para abrirlo como una ventana */
+  visibility: visible;
+  scale: 1;
+}
+.dropdown-mireserva-btn:focus-within >.dropdown-reserva {/* Focus para abrirlo como una ventana */
   visibility: visible;
   scale: 1;
 }
@@ -113,7 +117,7 @@ h2 {
   color: #f7b914;
 }
 
-
+ */
 .dropdown-arrow {
   font-size: 13px;
 }
@@ -138,9 +142,20 @@ h2 {
   box-shadow: 3px 3px 20px 1px #1f1f1f2a;
   scale: 0;
   transform-origin: 30% 0%;
-  transition: 0.2s scale ease-in-out;
+  transition: 0.3s scale ease-in-out;
 }
 
+.dropdown-reserva:hover{
+  visibility: visible;
+  scale: 1;
+}
+
+@key
+.dropdown-hoverZone{
+  background-color: red;
+  height: 100px;
+  width: 100px;
+}
 
 .dropdown-reserva a {
   color: #666;
@@ -991,6 +1006,19 @@ grid-template-rows: 16rem;
   color: white;
   background-color: var(--orange-flybondi);
 }
+
+.label-reserva{
+
+color: #00000000;
+left: 0;
+border-bottom: 0;
+right: 0;
+top: 0;
+padding-bottom: 50px;
+  position: absolute;
+cursor: pointer;
+}
+
 
 .burgerIcon .bar {
   display: inline-block;
