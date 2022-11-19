@@ -18,6 +18,7 @@ h2 {
 }
 
 :root {
+  --orange-flybondi-600: #d49c00;
   --orange-flybondi: #f7b914;
   --lightOrange-flybondi: #fed156;
   --nav-btn-hover:
@@ -25,18 +26,18 @@ h2 {
 }
 
 ::-webkit-scrollbar {
-  background-color: #555;
-  width: 15px;
+  width: 10px;
+  background-color: #b7b7b7; 
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 100vw;
-  background-color: #b7b7b7;
-  border: 3.5px solid #555;
+  background-color: #888;
+
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #999;
+  background-color: #777;
+
 }
 
 
