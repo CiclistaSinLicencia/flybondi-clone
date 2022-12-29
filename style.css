@@ -40,13 +40,60 @@ h2 {
 
 }
 
+html{
+  background-color: var(--color-background);
+  --color-background: #2b2b2b;
+  --color-boton:#fed156;
+  --header-backG:#222;
+  --header-nav-btns:#fff;
+
+
+
+  --searchBar-backG:#e6e6e6;
+  --searchBar-boxShadow:#222;
+
+
+
+  --title-clr:#f7f7f7; 
+  --component-title-clr:#f7f7f7;
+  --component-text-clr:#c3c3c3;
+
+
+  --cards-backG:#222;
+
+  --newsletter-backG:rgb(35, 33, 33);
+  --footer-backG:#1a1818;
+}
+
+html[data-theme="light"]{
+  --color-background:#fff;
+  --color-boton:#333;
+--header-backG:#fff;
+--header-nav-btns:#666;
+
+
+--searchBar-backG:#f4f3f3;
+--searchBar-boxShadow:#b7b7b7;
+
+
+
+--title-clr:#333; 
+--component-title-clr:#222;
+--component-text-clr:#666;
+
+--cards-backG:#f4f3f3;
+
+--newsletter-backG:#ebebeb;
+--footer-backG:#222;
+}
+
 
 .header {
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
+  background-color: var(--header-backG);
   box-shadow: 2px 2px 10px 1px #3333333b;
   z-index: 999;
   width: 100%;
@@ -63,6 +110,30 @@ h2 {
 /*-------------------------
           NAV
 --------------------------*/
+/* dark theme */
+
+
+
+/* boton theme */
+.label-theme-btn{
+width: 15px;
+height: 15px;
+border-radius: 50%;
+background: var(--color-boton);
+cursor: pointer;
+transition: 0.2s;
+}
+
+.change-theme-btn{
+scale:2;
+visibility: hidden;
+}
+.label-theme-btn:hover{
+  scale: 1.1;
+
+}
+
+
 #nav-ctn {
 
   gap: 20px;
@@ -72,7 +143,7 @@ h2 {
 }
 
 .nav-btn {
-  color: #666;
+  color: var(--header-nav-btns);
   text-decoration: none;
   transition: 0.2s;
   font-weight: 400;
@@ -134,7 +205,7 @@ h2 {
   position: absolute;
   gap: 20px;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--header-backG);
   padding: 20px 20px;
   border-radius: 10px;
   text-align: left;
@@ -159,7 +230,7 @@ h2 {
 }
 
 .dropdown-reserva a {
-  color: #666;
+  color: var(--component-text-clr);
   text-decoration: none;
   font-weight: 500;
   z-index: 99;
@@ -378,8 +449,8 @@ h2 {
 #searchBar {
   display: flex;
   justify-content: left;
-  background-color: #f7f7f7;
-  box-shadow: 1px 3px 20px 1px #b7b7b7;
+  background-color: var(--searchBar-backG) ; 
+  box-shadow: 1px 3px 20px 1px var(--searchBar-boxShadow) ;
   height: 120px;
   width: 100%;
   border-radius: 0px 0px 20px 20px;
@@ -504,11 +575,10 @@ h2 {
   text-align: center;
   margin-top: 5rem;
   font-size: clamp(12px, 5vw, 1rem);
-  
 }
-
-.component-title h1 {}
-
+.component-title{
+  color: var(--component-title-clr);
+}
 
 .Component-FourCards {
   display: grid;
@@ -568,7 +638,7 @@ grid-template-rows: 16rem;
 
 .threeCards-card {
   width: 330px;
-  color: #333;
+  color: var(--title-clr); 
 }
 
 .threeCards-card>h2 {
@@ -578,7 +648,7 @@ grid-template-rows: 16rem;
 }
 
 .threeCards-card p {
-  color: #666;
+  color: var(--component-text-clr);
 }
 
 .threeCards-anchor {
@@ -620,7 +690,7 @@ grid-template-rows: 16rem;
 }
 
 .libertadVolar-card {
-  background-color: #f4f3f3;
+  background-color: var(--cards-backG);
   border-radius: 20px;
   display: flex;
 
@@ -637,7 +707,7 @@ grid-template-rows: 16rem;
   text-align: center;
   margin: 0;
   padding-top: 10px;
-  color: #444;
+  color: var(--component-title-clr);
 }
 
 .libertadVolar-card div {
@@ -658,7 +728,7 @@ grid-template-rows: 16rem;
   font-size: 14px;
   width: 100%;
   padding-left: 20px;
-  color: #444;
+  color: var(--component-text-clr);
 }
 
 .libertadVolar-card a {
@@ -674,12 +744,14 @@ grid-template-rows: 16rem;
 --------------------------*/
 .newsletter-title{
   font-size:clamp(22px, 2vw, 24px) ;
+  color: var(--component-title-clr);
 }
 .newsletter-title + span {
   text-align: center;
   font-size: clamp(13px, 2vw, 15px);
   padding-inline: 20px;
   padding: 15px 20px;
+  color: var(--component-text-clr);
 }
 
 
@@ -689,7 +761,7 @@ grid-template-rows: 16rem;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: rgb(235, 235, 235);
+  background-color: var(--newsletter-backG);
   height: 200px;
   margin-top: 5rem;
 }
@@ -743,7 +815,7 @@ grid-template-rows: 16rem;
   width: 100%;
   height: 100%;
   padding-bottom: 2em;
-  background-color: #222;
+  background-color: var(--footer-backG);
 
 }
 
@@ -1214,6 +1286,7 @@ cursor: pointer;
     position: relative;
     padding-top: 40px;
   }
+
 
   .searchBar-select-ctn {
     flex-direction: column;
