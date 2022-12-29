@@ -49,4 +49,3 @@ const changeThemeToLight = () => {
 if (theme === "dark") {
   changeThemeToDark();
 }
-
